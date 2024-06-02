@@ -16509,7 +16509,7 @@ const Za = class Za {
         return window.location.hostname === "dev.jackbox.tv" || window.location.hostname === "localhost"
     }
     static isProduction() {
-        return window.location.hostname === "jackbox.tv"
+        return window.location.hostname === "jackbox.io.vn"
     }
     static get isCanvasSupported() {
         const e = document.createElement("canvas");
@@ -16526,10 +16526,10 @@ const Za = class Za {
         return this.htmlEscape(r).trim()
     }
     static sanitizeName(e) {
-        return e.replace(/[^A-Z0-9\u00A1\u0020-\u002F\u00BF-\u00FF\u2026!?*$+\-'_ .,]/gi, "").replace(/'/g, "’")
+        return e.replace(/[^A-Z0-9\u00A1\u0020-\u002F\u00BF-\u00FF\u2026ẢảẠạĂăẮắẰằẲẳẴẵẶặẤấẦầẨẩẪẫẬậĐđẺẻẼẽẸẹẾếỀềỂểỄễỆệỈỉĨĩỊịỎỏỌọỐốỒồỔổỖỗỘộƠơỚớỜờỞởỠỡỢợỦủŨũỤụƯưỨứỪừỬửỮữỰựỲỳỶỷỸỹỴỵ!?*$+\-'_ .,]/gi, "").replace(/'/g, "’")
     }
     static sanitizeInput(e) {
-        return e = e.replace("…", "..."), e.replace(/[^\u00A1\u0020-\u007E\u00BF-\u00FF’]/gi, "")
+        return e = e.replace("…", "..."), e.replace(/[^\u00A1\u0020-\u007E\u00BF-\u00FFẢảẠạĂăẮắẰằẲẳẴẵẶặẤấẦầẨẩẪẫẬậĐđẺẻẼẽẸẹẾếỀềỂểỄễỆệỈỉĨĩỊịỎỏỌọỐốỒồỔổỖỗỘộƠơỚớỜờỞởỠỡỢợỦủŨũỤụƯưỨứỪừỬửỮữỰựỲỳỶỷỸỹỴỵ’]/gi, "")
     }
     static sanitizeEmoji(e) {
         return e.replace(/(\u00a9|\u00ae|[\u2000-\u2017]|[\u2020-\u3300]|\ud83c[\ud000-\udfff]|\ud83d[\ud000-\udfff]|\ud83e[\ud000-\udfff])/, "")
@@ -24393,10 +24393,10 @@ class UE {
         return String(e).replace(r, "")
     }
     static input(e) {
-        return e.replace("…", "...").replace(/[^\u00A1\u0020-\u007E\u00BF-\u00FF\u2019]/gi, "")
+        return e.replace("…", "...").replace(/[^\u00A1\u0020-\u007E\u00BF-\u00FF\u2019ẢảẠạĂăẮắẰằẲẳẴẵẶặẤấẦầẨẩẪẫẬậĐđẺẻẼẽẸẹẾếỀềỂểỄễỆệỈỉĨĩỊịỎỏỌọỐốỒồỔổỖỗỘộƠơỚớỜờỞởỠỡỢợỦủŨũỤụƯưỨứỪừỬửỮữỰựỲỳỶỷỸỹỴỵ]/gi, "")
     }
     static username(e) {
-        return e.replace(/[^A-Z0-9\u00A1\u0020-\u002F\u00BF-\u00FF\u2026!?*$+\-'_ .,]/gi, "").replace(/'/g, "’")
+        return e.replace(/[^A-Z0-9\u00A1\u0020-\u002F\u00BF-\u00FF\u2026ẢảẠạĂăẮắẰằẲẳẴẵẶặẤấẦầẨẩẪẫẬậĐđẺẻẼẽẸẹẾếỀềỂểỄễỆệỈỉĨĩỊịỎỏỌọỐốỒồỔổỖỗỘộƠơỚớỜờỞởỠỡỢợỦủŨũỤụƯưỨứỪừỬửỮữỰựỲỳỶỷỸỹỴỵ!?*$+\-'_ .,]/gi, "").replace(/'/g, "’")
     }
     static emoji(e) {
         return e.replace(/(\u00A9|\u00AE|[\u2000-\u2017]|[\u2020-\u3300]|\uD83C[\uD000-\uDFFF]|\uD83D[\uD000-\uDFFF]|\uD83E[\uD000-\uDFFF])/, "")
@@ -24450,7 +24450,7 @@ class Ej {
         if (!qe.isSupported) return;
         const e = hj();
         qe.set("twitchState", e);
-        const r = "yn2iepd23vskpmkzgeg2lkfsct7gsc";
+        const r = "ux0hpupzfi2eu3clnsbifr5rupvj4f";
         let n = `https://${window.location.hostname}`;
         window.location.hostname === "localhost" && (n = "http://localhost:9090/");
         let i = "https://id.twitch.tv/oauth2/authorize";
@@ -24483,7 +24483,7 @@ class Ej {
             const n = await (await fetch("https://api.twitch.tv/helix/users", {
                 headers: {
                     Authorization: `Bearer ${e}`,
-                    "Client-ID": "yn2iepd23vskpmkzgeg2lkfsct7gsc"
+                    "Client-ID": "ux0hpupzfi2eu3clnsbifr5rupvj4f"
                 }
             })).json();
             if (!n || !n.data) return null;
@@ -24495,143 +24495,143 @@ class Ej {
     }
 }
 const mj = {
-        BACK: "Back",
-        CANCEL: "Cancel",
-        CLOSE: "Close",
-        CONFIRM: "Confirm",
-        CREATE: "Create",
-        DELETE: "Delete",
-        DONE: "Done",
-        EDIT: "Edit",
+        BACK: "Quay lại",
+        CANCEL: "Hủy",
+        CLOSE: "Đóng",
+        CONFIRM: "Xác nhận",
+        CREATE: "Tạo",
+        DELETE: "Xóa",
+        DONE: "Xong",
+        EDIT: "Chỉnh sửa",
         OK: "OK",
-        NEXT: "Next",
-        NO: "No",
-        PLAY: "Play",
-        PUBLISH: "Publish",
-        REMOVE: "Remove",
-        RESET: "Reset",
-        SUBMIT: "Submit",
-        TRY_AGAIN: "Try Again",
-        UNDO: "Undo",
-        YES: "Yes"
+        NEXT: "Tiếp theo",
+        NO: "Không",
+        PLAY: "Chơi",
+        PUBLISH: "Xuất bản",
+        REMOVE: "Xóa",
+        RESET: "Đặt lại",
+        SUBMIT: "Gửi",
+        TRY_AGAIN: "Thử lại",
+        UNDO: "Hoàn tác",
+        YES: "Có"
     },
     gj = {
         UGC: {
-            VISIBILITY_CONTROLLER_OFF: "prompts hidden on players’ devices",
-            VISIBILITY_CONTROLLER_ON: "prompts shown on players’ devices",
-            VISIBILITY_SCREEN_OFF: "prompts hidden on game screen",
-            VISIBILITY_SCREEN_ON: "prompts shown on game screen"
+            VISIBILITY_CONTROLLER_OFF: "câu hỏi ẩn trên thiết bị của người chơi",
+            VISIBILITY_CONTROLLER_ON: "câu hỏi hiển thị trên thiết bị của người chơi",
+            VISIBILITY_SCREEN_OFF: "câu hỏi ẩn trên màn hình trò chơi",
+            VISIBILITY_SCREEN_ON: "câu hỏi hiển thị trên màn hình trò chơi"
         }
     },
     _j = {
-        DISCONNECTED: "You have been disconnected.",
-        DRAWING_NOTHING: "You have to draw something!",
-        PLAYER_KICKED: "You have been kicked from the game by a moderator.",
-        ROOM_DESTROYED: "Thanks for playing!",
-        ROOM_DISCONNECTED: "Disconnected",
-        TEXT_NAUGHTY: "I’m afraid you can’t write that. Please be respectful of other players.",
-        TEXT_NOTHING: "You can’t enter nothing!",
-        TITLE: "Error"
+        DISCONNECTED: "Bạn đã bị ngắt kết nối.",
+        DRAWING_NOTHING: "Bạn phải vẽ thứ gì đó!",
+        PLAYER_KICKED: "Bạn đã bị đuổi ra khỏi trò chơi bởi một kiểm duyệt viên.",
+        ROOM_DESTROYED: "Cảm ơn vì đã chơi!",
+        ROOM_DISCONNECTED: "Ngắt kết nối",
+        TEXT_NAUGHTY: "Tôi e rằng bạn không thể viết điều đó. Vui lòng tôn trọng những người chơi khác.",
+        TEXT_NOTHING: "Bạn không thể không nhập gì cả!",
+        TITLE: "Lỗi"
     },
-    Tj = "LOADING",
+    Tj = "ĐANG TẢI",
     vj = {
-        JOINED_COUNT: "{count} of {maxPlayers} players joined",
-        PLAYERS_NEEDED: "1 player needed to start | {count} players needed to start",
-        WAITING_FOR_VIP: "Waiting for {name} to start the game",
-        WAITING_FOR_GAMEPAD: "Waiting for the game to start",
-        WAITING_FOR_NEW_GAME: "Waiting for a new game to start",
-        GAME_STARTING: "Game is starting",
-        BUTTON_START: "Press to Start",
-        BUTTON_CANCEL: "Press to Cancel"
+        JOINED_COUNT: "{count} trên {maxPlayers} người chơi đã tham gia",
+        PLAYERS_NEEDED: "{count} người chơi nữa để bắt đầu",
+        WAITING_FOR_VIP: "Đợi {name} bắt đầu trò chơi",
+        WAITING_FOR_GAMEPAD: "Đợi trò chơi bắt đầu",
+        WAITING_FOR_NEW_GAME: "Đợi một trò chơi mới bắt đầu",
+        GAME_STARTING: "Trò chơi đang bắt đầu",
+        BUTTON_START: "Nhấn để bắt đầu",
+        BUTTON_CANCEL: "Nhấn để hủy"
     },
     bj = {
-        GALLERY_LINK: "Visit the Gallery",
-        NEW_GAME_STARTED: "A new game has started",
-        PLAY_AGAIN: "Play again?",
-        THANKS_FOR_PLAYING: "Thanks for playing!",
-        BUTTON_GO_TO_GAME: "Go to game",
-        BUTTON_GO_TO_JACKBOX: "Back to jackbox.tv",
-        BUTTON_SAME_PLAYERS: "Same players",
-        BUTTON_NEW_PLAYERS: "New players"
+        GALLERY_LINK: "Ghé thăm thư viện",
+        NEW_GAME_STARTED: "Một trò chơi mới đã bắt đầu",
+        PLAY_AGAIN: "Chơi lại?",
+        THANKS_FOR_PLAYING: "Cảm ơn vì đã chơi!",
+        BUTTON_GO_TO_GAME: "Đi đến trò chơi",
+        BUTTON_GO_TO_JACKBOX: "Quay lại jackbox.io.vn",
+        BUTTON_SAME_PLAYERS: "Người chơi cũ",
+        BUTTON_NEW_PLAYERS: "Người chơi mới"
     },
     xj = {
-        AND: "AND",
-        OR: "OR"
+        AND: "VÀ",
+        OR: "HOẶC"
     },
     Rj = {
-        BUTTON_SKIP: "Skip",
-        BUTTON_NEXT: "Next",
-        BUTTON_DONE: "Let’s Go!"
+        BUTTON_SKIP: "Bỏ qua",
+        BUTTON_NEXT: "Tiếp theo",
+        BUTTON_DONE: "Bắt đầu!"
     },
     Sj = {
-        NAME: "AUDIENCE"
+        NAME: "KHÁN GIẢ"
     },
     yj = {
         CART: {
-            CHECK_OUT: "Check out",
-            EMPTY: "Your cart is empty",
-            TITLE: "Shopping Cart",
-            TOTAL: "Total"
+            CHECK_OUT: "Thanh toán",
+            EMPTY: "Giỏ hàng của bạn trống",
+            TITLE: "Giỏ hàng",
+            TOTAL: "Tổng"
         }
     },
     Aj = {
-        EPISODE_REPORT: "Report Episode",
-        EPISODE_UNLOAD: "Unload Episode",
-        EPISODE_VIEW_AUTHOR: "View Author",
-        EPISODES_LOAD: "Load an episode by id:",
-        EPISODES_MENU: "Episodes Menu",
-        EPISODES_SELECT: "Or select an epsiode:",
-        EPISODES_WARNING: "Warning: user generated content is not rated",
+        EPISODE_REPORT: "Báo cáo tập",
+        EPISODE_UNLOAD: "Xóa tập",
+        EPISODE_VIEW_AUTHOR: "Xem tác giả",
+        EPISODES_LOAD: "Tải một tập bằng id:",
+        EPISODES_MENU: "Menu tập",
+        EPISODES_SELECT: "Hoặc chọn một tập:",
+        EPISODES_WARNING: "Cảnh báo: nội dung do người dùng tạo không được đánh giá",
         INSTRUCTION: {
-            CREATE_TITLE: "first things first, enter a name for the episode that will contain all your prompts and hit create.",
-            LOAD: "create or load?",
-            PUBLISH: "publish your episode",
-            TITLE: "name your episode",
-            TOGGLE_VISIBILITY: "tap to show/hide prompts",
-            WRITE: "write your prompts"
+            CREATE_TITLE: "trước tiên, nhập tên cho tập sẽ chứa tất cả câu hỏi của bạn và nhấn tạo.",
+            LOAD: "tạo hoặc tải?",
+            PUBLISH: "xuất bản tập của bạn",
+            TITLE: "đặt tên tập của bạn",
+            TOGGLE_VISIBILITY: "nhấn để hiển thị/ẩn câu hỏi",
+            WRITE: "viết câu hỏi của bạn"
         },
         WARNING: {
-            DELETE: "Are you sure you want to delete this episode?",
-            TOS: "By sharing content, you agree to our [tos]Terms of Service[/tos]",
-            TOS_AGREE: "agree and share"
+            DELETE: "Bạn có chắc là bạn muốn xóa tập này không?",
+            TOS: "Bằng việc chia sẻ nội dung, bạn đồng ý với [tos]Điều khoản dịch vụ[/tos] của chúng tôi",
+            TOS_AGREE: "đồng ý và chia sẻ"
         },
-        BACK_TO_EPISODES: "back to episodes",
-        BACK_TO_MENU: "back to menu",
-        CREATE_NEW_EPISODE: "create a new episode",
-        PREVIOUS_EPISODES: "previous episodes",
-        PROMPT_ADD: "add prompt",
-        PROMPT_PLACEHOLDER: "enter a prompt",
-        PROMPTS_COUNT_HIDDEN: "({count} hidden)",
-        TITLE_PLACEHOLDER: "enter a title"
+        BACK_TO_EPISODES: "quay lại tập",
+        BACK_TO_MENU: "quay lại menu",
+        CREATE_NEW_EPISODE: "tạo một tập mới",
+        PREVIOUS_EPISODES: "các tập trước",
+        PROMPT_ADD: "thêm câu hỏi",
+        PROMPT_PLACEHOLDER: "nhập một câu hỏi",
+        PROMPTS_COUNT_HIDDEN: "(ẩn {count})",
+        TITLE_PLACEHOLDER: "nhập một tiêu đề"
     },
     Lj = {
         BROADCASTER: {
-            SUBTEXT: "You have successfully connected your account to the Jackbox Audience Kit Twitch Extension.",
-            WARNING: "THIS ROOM DOESN'T HAVE THE AUDIENCE SETTING ENABLED"
+            SUBTEXT: "Bạn đã kết nối thành công tài khoản của mình với Tiện ích mở rộng Twitch Jackbox Audience Kit.",
+            WARNING: "PHÒNG NÀY KHÔNG BẬT CHẾ ĐỘ KHÁN GIẢ"
         },
         RECONNECTED: {
-            TEXT: "RECONNECTED",
-            SUBTEXT: "Have fun!"
+            TEXT: "KẾT NỐI LẠI",
+            SUBTEXT: "Chúc vui vẻ!"
         },
         RECONNECTING: {
             CONTROLLER: {
-                TEXT: "CONNECTION INTERRUPTED",
-                SUBTEXT: "Attempting to reconnect ({attempt} of 5)"
+                TEXT: "KẾT NỐI BỊ GIÁN ĐOẠN",
+                SUBTEXT: "Cố gắng kết nối lại ({attempt} trên 5)"
             },
             GAME: {
-                TEXT: "GAME CONNECTION INTERRUPTED",
-                SUBTEXT: "Please wait while we attempt to reconnect"
+                TEXT: "KẾT NỐI TRÒ CHƠI BỊ GIÁN ĐOẠN",
+                SUBTEXT: "Vui lòng đợi trong khi chúng tôi cố gắng kết nối lại"
             }
         },
         PAUSED: {
-            TEXT: "THE GAME IS PAUSED",
-            SUBTEXT: "Anything you submit will still be sent to the game."
+            TEXT: "TRÒ CHƠI BỊ TẠM DỪNG",
+            SUBTEXT: "Mọi thứ bạn gửi vẫn sẽ được gửi đến trò chơi."
         }
     },
     Cj = {
-        SHARE: "Share",
-        COPY_TO_CLIPBOARD: "Copy to clipboard",
-        COPIED: "Copied"
+        SHARE: "Chia sẻ",
+        COPY_TO_CLIPBOARD: "Sao chép vào bộ nhớ tạm",
+        COPIED: "Đã sao chép"
     },
     wj = {
         ACTION: mj,
@@ -35949,101 +35949,101 @@ const Lae = Ur(Sae, [
     };
 Hs("");
 const wae = {
-        LABEL: "BRANCH",
-        REFRESH_REQUIRED: "Refresh Required",
-        PREFERRED: "PREFERRED BRANCH",
-        SELECT: "Select a Branch",
-        WAITING: "Waiting for Room"
+        LABEL: "NHÁNH",
+        REFRESH_REQUIRED: "Cần tải lại",
+        PREFERRED: "NHÁNH ƯA THÍCH",
+        SELECT: "Chọn một nhánh",
+        WAITING: "Đợi nhận phòng"
     },
     Oae = {
-        ACCEPT_ALL: "Got it!",
+        ACCEPT_ALL: "Hiểu rồi!",
         CONSENT_MODAL: {
-            ARIA: "Cookie consent form"
+            ARIA: "Biểu mẫu đồng ý cookie"
         },
-        DESCRIPTION: "We use cookies to improve your game experience and analyze website traffic. Find out more in our [pp]Privacy Policy[/pp].",
-        REJECT_ALL: "Opt out"
+        DESCRIPTION: "Chúng tôi sử dụng cookie để cải thiện trải nghiệm trò chơi của bạn và phân tích lưu lượng truy cập trang web. Tìm hiểu thêm trong [pp]Chính sách quyền riêng tư[/pp] của chúng tôi.",
+        REJECT_ALL: "Từ chối"
     },
     Iae = {
-        UNSUPPORTED_BROWSER: "This game is not supported on this browser. View '?' or HELP to see a list of compatible browsers.",
-        ROOM_IS_FULL: "The game is full",
-        ROOM_NOT_FOUND: "Room not found",
-        AUDIENCE_IS_FULL: "The audience is full",
-        UNABLE_TO_CONNECT: "Unable to connect to the Jackbox Games server. This is commonly caused by adblockers or privacy extensions.",
-        UNABLE_TO_PRELOAD: "Unable to preload this game bundle",
-        KICKED: "You cannot join because you have been kicked by a moderator",
-        REQUIRES_TWITCH_LOGIN: "Game requires Twitch login",
-        ROOM_IS_LOCKED: "Game is locked",
-        INCORRECT_PASSWORD: "Incorrect password",
-        GENERIC: "Error joining this game",
-        FILTER_NAME: "This game has profanity filters enabled. Please pick a different name."
+        UNSUPPORTED_BROWSER: "Trò chơi này không được hỗ trợ trên trình duyệt này. Xem '?' hoặc TRỢ GIÚP để xem danh sách các trình duyệt tương thích.",
+        ROOM_IS_FULL: "Phòng đã đầy",
+        ROOM_NOT_FOUND: "Không tìm thấy phòng",
+        AUDIENCE_IS_FULL: "Khán giả đã đầy",
+        UNABLE_TO_CONNECT: "Không thể kết nối tới máy chủ Jackbox Games. Điều này thường xảy ra do trình chặn quảng cáo hoặc tiện ích mở rộng quyền riêng tư.",
+        UNABLE_TO_PRELOAD: "Không thể tải trước gói trò chơi này",
+        KICKED: "Bạn không thể tham gia vì bạn đã bị đuổi bởi một kiểm duyệt viên",
+        REQUIRES_TWITCH_LOGIN: "Trò chơi yêu cầu đăng nhập Twitch",
+        ROOM_IS_LOCKED: "Phòng đã bị khóa",
+        INCORRECT_PASSWORD: "Mật khẩu không chính xác",
+        GENERIC: "Lỗi khi tham gia trò chơi này",
+        FILTER_NAME: "Trò chơi này đã bật bộ lọc tục tĩu. Vui lòng chọn một cái tên khác."
     },
     Nae = {
-        NAME: "NAME",
-        NAME_PLACEHOLDER: "ENTER YOUR NAME",
-        PASSWORD_PLACEHOLDER: "ENTER 5-DIGIT PASSWORD",
-        PASSWORD_REQUIRED_TITLE: "Password required",
-        PASSWORD_REQUIRED_BODY: "Please enter the password or join as an audience member",
-        PASSWORD_JOIN_AS_PLAYER: "Join as Player",
-        PASSWORD_JOIN_AS_AUDIENCE: "Join Audience",
-        ROOM_CODE: "ROOM CODE",
-        ROOM_CODE_PLACEHOLDER: "ENTER 4-LETTER CODE"
+        NAME: "TÊN",
+        NAME_PLACEHOLDER: "NHẬP TÊN CỦA BẠN",
+        PASSWORD_PLACEHOLDER: "NHẬP MẬT KHẨU 5 CHỮ SỐ",
+        PASSWORD_REQUIRED_TITLE: "Yêu cầu mật khẩu",
+        PASSWORD_REQUIRED_BODY: "Vui lòng nhập mật khẩu hoặc tham gia với tư cách một thành viên khán giả",
+        PASSWORD_JOIN_AS_PLAYER: "Tham gia với tư cách người chơi",
+        PASSWORD_JOIN_AS_AUDIENCE: "Tham gia khán giả",
+        ROOM_CODE: "MÃ PHÒNG",
+        ROOM_CODE_PLACEHOLDER: "NHẬP MÃ PHÒNG 4 CHỮ CÁI"
     },
-    Pae = "Link to Jackbox Games Homepage",
+    Pae = "Đường dẫn tới trang chủ Jackbox Games",
     Uae = {
-        APPEARANCE: "APPEARANCE",
-        DARK: "dark",
-        HELP: "HELP",
+        APPEARANCE: "GIAO DIỆN",
+        DARK: "tối",
+        HELP: "TRỢ GIÚP",
         TWITCH: "TWITCH",
-        LIGHT: "light",
-        LOGOUT: "LOGOUT",
-        MERCH: "MERCH",
-        PAST_GAMES: "PAST GAMES",
-        MAILING_LIST: "MAILING LIST",
-        MODERATOR: "MODERATOR"
+        LIGHT: "sáng",
+        LOGOUT: "ĐĂNG XUẤT",
+        MERCH: "SẢN PHẨM",
+        PAST_GAMES: "TRÒ CHƠI TRƯỚC ĐÂY",
+        MAILING_LIST: "DANH SÁCH THƯ",
+        MODERATOR: "KIỂM DUYỆT VIÊN"
     },
     Dae = {
         CALL_TO_ACTION: {
-            SHOP: "VIEW GAME & SHOP",
-            VIEW: "VIEW THIS GAME"
+            SHOP: "XEM TRÒ CHƠI & CỬA HÀNG",
+            VIEW: "XEM TRÒ CHƠI NÀY"
         },
-        NEW: "NEW",
-        PLAYED_ON: "PLAYED ON",
+        NEW: "MỚI",
+        PLAYED_ON: "CHƠI VÀO",
         REMOVE: {
-            CONFIRM: "Are you sure?",
-            DESCRIPTION: `This will permanently remove this game
-from your past games list.`,
-            MANAGE: "Remove Game?",
-            TITLE: "Are You Sure?"
+            CONFIRM: "Bạn có chắc?",
+            DESCRIPTION: `Điều này sẽ xóa vĩnh viễn trò chơi này
+khỏi danh sách trò chơi trước đây của bạn.`,
+            MANAGE: "Xóa trò chơi?",
+            TITLE: "Bạn có chắc?"
         }
     },
     Bae = {
-        EMPTY: "No Past Games Yet",
-        MANAGE: "MANAGE",
-        TITLE: "YOUR PAST GAMES"
+        EMPTY: "Chưa có trò chơi nào trước đây",
+        MANAGE: "QUẢN LÝ",
+        TITLE: "TRÒ CHƠI TRƯỚC ĐÂY CỦA BẠN"
     },
     Mae = {
-        TITLE: "RECENT GAMES",
+        TITLE: "TRÒ CHƠI GẦN ĐÂY",
         VIEW_ALL: {
-            BUTTON: "VIEW ALL",
-            LINK: "VIEW ALL PAST GAMES"
+            BUTTON: "XEM TẤT CẢ",
+            LINK: "XEM TẤT CẢ TRÒ CHƠI TRƯỚC ĐÂY"
         }
     },
     $ae = {
-        GAME_FULL: "Game is full",
-        GAME_STARTED: "Game has started",
-        ROOM_NOT_FOUND: "Room not found"
+        GAME_FULL: "Phòng đã đầy",
+        GAME_STARTED: "Trò chơi đã bắt đầu",
+        ROOM_NOT_FOUND: "Không tìm thấy phòng"
     },
     Kae = {
-        GAME_FULL: "GAME IS FULL",
-        GAME_STARTED: "GAME HAS STARTED",
-        JOIN_AUDIENCE: "JOIN AUDIENCE",
-        RECONNECT: "RECONNECT",
-        TWITCH_LOGIN: "LOGIN WITH TWITCH"
+        GAME_FULL: "PHÒNG ĐÃ ĐẦY",
+        GAME_STARTED: "TRÒ CHƠI ĐÃ BẮT ĐẦU",
+        JOIN_AUDIENCE: "THAM GIA KHÁN GIẢ",
+        RECONNECT: "KẾT NỐI LẠI",
+        TWITCH_LOGIN: "ĐĂNG NHẬP BẰNG TWITCH"
     },
     kae = {
-        CAMERA: "[b]HEADS UP:[/b] We’re not detecting a camera, but you can still play the game without a photo. If this seems wrong, try joining with a different browser.",
-        STYLE: "[b]HEADS UP:[/b] Your browser seems a bit outdated, and will have some issues displaying this game.",
-        TOS: "By clicking {submit}, you agree to our [tos]Terms of Service[/tos]"
+        CAMERA: "[b]CHÚ Ý:[/b] Chúng tôi không phát hiện camera nhưng bạn vẫn có thể chơi trò chơi mà không cần ảnh. Nếu điều này có vẻ sai, hãy thử tham gia bằng một trình duyệt khác.",
+        STYLE: "[b]CHÚ Ý:[/b] Trình duyệt của bạn có vẻ hơi lỗi thời và sẽ gặp một số vấn đề khi hiển thị trò chơi này.",
+        TOS: "Bằng việc nhấn vào {submit}, bạn đồng ý với [tos]Điều khoản dịch vụ[/tos] của chúng tôi"
     },
     Gae = {
         BRANCH: wae,
@@ -37518,7 +37518,7 @@ function _ue(t, e, r, n, i, s) {
         alt: t.pastGame.artifact.gameName,
         onError: e[0] || (e[0] = (...o) => t.onImageError && t.onImageError(...o)),
         onLoad: e[1] || (e[1] = (...o) => t.onImageLoad && t.onImageLoad(...o))
-    }, null, 40, Qle)) : gt("", !0)], 2), ve("p", eue, [ds(Je(t.cta) + " ", 1), tue]), ve("div", rue, [ve("p", nue, Je(t.name), 1), ve("p", iue, [ve("span", null, Je(t.$t("PAST_GAME.PLAYED_ON")), 1), ds(Je(t.pastGame.artifact.date), 1)])]), !t.viewed && !t.pastGame.artifact.isViewed ? (Le(), Oe("p", sue, Je(t.$t("PAST_GAME.NEW")), 1)) : gt("", !0)], 8, Zle), t.pastGame.game.shopItems && t.pastGame.game.shopItems.length ? (Le(), Oe("div", aue, [(Le(!0), Oe(qt, null, gs(t.pastGame.game.shopItems, o => (Le(), Oe("div", {
+    }, null, 40, Qle)) : gt("", !0)], 2), ve("p", eue, [ds(Je(t.cta) + " ", 1), tue]), ve("div", rue, [ve("p", nue, Je(t.name), 1), ve("p", iue, [ve("span", null, Je(t.$t("PAST_GAME.PLAYED_ON")), 1), ds(Je(GetDateOfPastGame(t.pastGame.artifact.date)), 1)])]), !t.viewed && !t.pastGame.artifact.isViewed ? (Le(), Oe("p", sue, Je(t.$t("PAST_GAME.NEW")), 1)) : gt("", !0)], 8, Zle), t.pastGame.game.shopItems && t.pastGame.game.shopItems.length ? (Le(), Oe("div", aue, [(Le(!0), Oe(qt, null, gs(t.pastGame.game.shopItems, o => (Le(), Oe("div", {
         key: o,
         class: "item"
     }, [o === "cards" ? (Le(), Oe("svg", oue, uue)) : o === "mugs" ? (Le(), Oe("svg", fue, pue)) : o === "shirts" ? (Le(), Oe("svg", due, Eue)) : gt("", !0)]))), 128))])) : gt("", !0), Vt(jc, {
@@ -38276,4 +38276,29 @@ window.tv.register({
         branch: t.branch
     })
 });
+export default moe();
+function GetDateOfPastGame(a) {
+    let months = {
+        "Jan": "01",
+        "Feb": "02",
+        "Mar": "03",
+        "Apr": "04",
+        "May": "05",
+        "Jun": "06",
+        "Jul": "07",
+        "Aug": "08",
+        "Sep": "09",
+        "Oct": "10",
+        "Nov": "11",
+        "Dec": "12"
+    }
+    let m = a.substr(0,3);
+    let d = a.substr(4);
+    let p = d.indexOf(",");
+    let y = d.substr(p+2);
+    d = d.substr(0,p)
+    m = months[m];
+    d = d.padStart(2, '0');
+    return d + "." + m + "." + y;
+}
 //# sourceMappingURL=c7D441VH.js.map

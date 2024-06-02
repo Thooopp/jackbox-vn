@@ -19507,101 +19507,101 @@ const kF = {
         "pt-BR": O6
     },
     N6 = {
-        LABEL: "BRANCH",
-        REFRESH_REQUIRED: "Refresh Required",
-        PREFERRED: "PREFERRED BRANCH",
-        SELECT: "Select a Branch",
-        WAITING: "Waiting for Room"
+        LABEL: "NHÁNH",
+        REFRESH_REQUIRED: "Cần tải lại",
+        PREFERRED: "NHÁNH ƯA THÍCH",
+        SELECT: "Chọn một nhánh",
+        WAITING: "Đợi nhận phòng"
     },
     U6 = {
-        ACCEPT_ALL: "Got it!",
+        ACCEPT_ALL: "Hiểu rồi!",
         CONSENT_MODAL: {
-            ARIA: "Cookie consent form"
+            ARIA: "Biểu mẫu đồng ý cookie"
         },
-        DESCRIPTION: "We use cookies to improve your game experience and analyze website traffic. Find out more in our [pp]Privacy Policy[/pp].",
-        REJECT_ALL: "Opt out"
+        DESCRIPTION: "Chúng tôi sử dụng cookie để cải thiện trải nghiệm trò chơi của bạn và phân tích lưu lượng truy cập trang web. Tìm hiểu thêm trong [pp]Chính sách quyền riêng tư[/pp] của chúng tôi.",
+        REJECT_ALL: "Từ chối"
     },
     P6 = {
-        UNSUPPORTED_BROWSER: "This game is not supported on this browser. View '?' or HELP to see a list of compatible browsers.",
-        ROOM_IS_FULL: "The game is full",
-        ROOM_NOT_FOUND: "Room not found",
-        AUDIENCE_IS_FULL: "The audience is full",
-        UNABLE_TO_CONNECT: "Unable to connect to the Jackbox Games server. This is commonly caused by adblockers or privacy extensions.",
-        UNABLE_TO_PRELOAD: "Unable to preload this game bundle",
-        KICKED: "You cannot join because you have been kicked by a moderator",
-        REQUIRES_TWITCH_LOGIN: "Game requires Twitch login",
-        ROOM_IS_LOCKED: "Game is locked",
-        INCORRECT_PASSWORD: "Incorrect password",
-        GENERIC: "Error joining this game",
-        FILTER_NAME: "This game has profanity filters enabled. Please pick a different name."
+        UNSUPPORTED_BROWSER: "Trò chơi này không được hỗ trợ trên trình duyệt này. Xem '?' hoặc TRỢ GIÚP để xem danh sách các trình duyệt tương thích.",
+        ROOM_IS_FULL: "Phòng đã đầy",
+        ROOM_NOT_FOUND: "Không tìm thấy phòng",
+        AUDIENCE_IS_FULL: "Khán giả đã đầy",
+        UNABLE_TO_CONNECT: "Không thể kết nối tới máy chủ Jackbox Games. Điều này thường xảy ra do trình chặn quảng cáo hoặc tiện ích mở rộng quyền riêng tư.",
+        UNABLE_TO_PRELOAD: "Không thể tải trước gói trò chơi này",
+        KICKED: "Bạn không thể tham gia vì bạn đã bị đuổi bởi một kiểm duyệt viên",
+        REQUIRES_TWITCH_LOGIN: "Trò chơi yêu cầu đăng nhập Twitch",
+        ROOM_IS_LOCKED: "Phòng đã bị khóa",
+        INCORRECT_PASSWORD: "Mật khẩu không chính xác",
+        GENERIC: "Lỗi khi tham gia trò chơi này",
+        FILTER_NAME: "Trò chơi này đã bật bộ lọc tục tĩu. Vui lòng chọn một cái tên khác."
     },
     D6 = {
-        NAME: "NAME",
-        NAME_PLACEHOLDER: "ENTER YOUR NAME",
-        PASSWORD_PLACEHOLDER: "ENTER 5-DIGIT PASSWORD",
-        PASSWORD_REQUIRED_TITLE: "Password required",
-        PASSWORD_REQUIRED_BODY: "Please enter the password or join as an audience member",
-        PASSWORD_JOIN_AS_PLAYER: "Join as Player",
-        PASSWORD_JOIN_AS_AUDIENCE: "Join Audience",
-        ROOM_CODE: "ROOM CODE",
-        ROOM_CODE_PLACEHOLDER: "ENTER 4-LETTER CODE"
+        NAME: "TÊN",
+        NAME_PLACEHOLDER: "NHẬP TÊN CỦA BẠN",
+        PASSWORD_PLACEHOLDER: "NHẬP MẬT KHẨU 5 CHỮ SỐ",
+        PASSWORD_REQUIRED_TITLE: "Yêu cầu mật khẩu",
+        PASSWORD_REQUIRED_BODY: "Vui lòng nhập mật khẩu hoặc tham gia với tư cách một thành viên khán giả",
+        PASSWORD_JOIN_AS_PLAYER: "Tham gia với tư cách người chơi",
+        PASSWORD_JOIN_AS_AUDIENCE: "Tham gia khán giả",
+        ROOM_CODE: "MÃ PHÒNG",
+        ROOM_CODE_PLACEHOLDER: "NHẬP MÃ PHÒNG 4 CHỮ CÁI"
     },
-    B6 = "Link to Jackbox Games Homepage",
+    B6 = "Đường dẫn tới trang chủ Jackbox Games",
     w6 = {
-        APPEARANCE: "APPEARANCE",
-        DARK: "dark",
-        HELP: "HELP",
+        APPEARANCE: "GIAO DIỆN",
+        DARK: "tối",
+        HELP: "TRỢ GIÚP",
         TWITCH: "TWITCH",
-        LIGHT: "light",
-        LOGOUT: "LOGOUT",
-        MERCH: "MERCH",
-        PAST_GAMES: "PAST GAMES",
-        MAILING_LIST: "MAILING LIST",
-        MODERATOR: "MODERATOR"
+        LIGHT: "sáng",
+        LOGOUT: "ĐĂNG XUẤT",
+        MERCH: "SẢN PHẨM",
+        PAST_GAMES: "TRÒ CHƠI TRƯỚC ĐÂY",
+        MAILING_LIST: "DANH SÁCH THƯ",
+        MODERATOR: "KIỂM DUYỆT VIÊN"
     },
     K6 = {
         CALL_TO_ACTION: {
-            SHOP: "VIEW GAME & SHOP",
-            VIEW: "VIEW THIS GAME"
+            SHOP: "XEM TRÒ CHƠI & CỬA HÀNG",
+            VIEW: "XEM TRÒ CHƠI NÀY"
         },
-        NEW: "NEW",
-        PLAYED_ON: "PLAYED ON",
+        NEW: "MỚI",
+        PLAYED_ON: "CHƠI VÀO",
         REMOVE: {
-            CONFIRM: "Are you sure?",
-            DESCRIPTION: `This will permanently remove this game
-from your past games list.`,
-            MANAGE: "Remove Game?",
-            TITLE: "Are You Sure?"
+            CONFIRM: "Bạn có chắc?",
+            DESCRIPTION: `Điều này sẽ xóa vĩnh viễn trò chơi này
+khỏi danh sách trò chơi trước đây của bạn.`,
+            MANAGE: "Xóa trò chơi?",
+            TITLE: "Bạn có chắc?"
         }
     },
     $6 = {
-        EMPTY: "No Past Games Yet",
-        MANAGE: "MANAGE",
-        TITLE: "YOUR PAST GAMES"
+        EMPTY: "Chưa có trò chơi nào trước đây",
+        MANAGE: "QUẢN LÝ",
+        TITLE: "TRÒ CHƠI TRƯỚC ĐÂY CỦA BẠN"
     },
     M6 = {
-        TITLE: "RECENT GAMES",
+        TITLE: "TRÒ CHƠI GẦN ĐÂY",
         VIEW_ALL: {
-            BUTTON: "VIEW ALL",
-            LINK: "VIEW ALL PAST GAMES"
+            BUTTON: "XEM TẤT CẢ",
+            LINK: "XEM TẤT CẢ TRÒ CHƠI TRƯỚC ĐÂY"
         }
     },
     k6 = {
-        GAME_FULL: "Game is full",
-        GAME_STARTED: "Game has started",
-        ROOM_NOT_FOUND: "Room not found"
+        GAME_FULL: "Phòng đã đầy",
+        GAME_STARTED: "Trò chơi đã bắt đầu",
+        ROOM_NOT_FOUND: "Không tìm thấy phòng"
     },
     G6 = {
-        GAME_FULL: "GAME IS FULL",
-        GAME_STARTED: "GAME HAS STARTED",
-        JOIN_AUDIENCE: "JOIN AUDIENCE",
-        RECONNECT: "RECONNECT",
-        TWITCH_LOGIN: "LOGIN WITH TWITCH"
+        GAME_FULL: "PHÒNG ĐÃ ĐẦY",
+        GAME_STARTED: "TRÒ CHƠI ĐÃ BẮT ĐẦU",
+        JOIN_AUDIENCE: "THAM GIA KHÁN GIẢ",
+        RECONNECT: "KẾT NỐI LẠI",
+        TWITCH_LOGIN: "ĐĂNG NHẬP BẰNG TWITCH"
     },
     V6 = {
-        CAMERA: "[b]HEADS UP:[/b] We’re not detecting a camera, but you can still play the game without a photo. If this seems wrong, try joining with a different browser.",
-        STYLE: "[b]HEADS UP:[/b] Your browser seems a bit outdated, and will have some issues displaying this game.",
-        TOS: "By clicking {submit}, you agree to our [tos]Terms of Service[/tos]"
+        CAMERA: "[b]CHÚ Ý:[/b] Chúng tôi không phát hiện camera nhưng bạn vẫn có thể chơi trò chơi mà không cần ảnh. Nếu điều này có vẻ sai, hãy thử tham gia bằng một trình duyệt khác.",
+        STYLE: "[b]CHÚ Ý:[/b] Trình duyệt của bạn có vẻ hơi lỗi thời và sẽ gặp một số vấn đề khi hiển thị trò chơi này.",
+        TOS: "Bằng việc nhấn vào {submit}, bạn đồng ý với [tos]Điều khoản dịch vụ[/tos] của chúng tôi"
     },
     F6 = {
         BRANCH: N6,
@@ -30029,13 +30029,13 @@ const wie = {
         key: 1,
         class: "image",
         src: Mie,
-        alt: "Thank You"
+        alt: "Cảm ơn"
     },
     Fie = {
         key: 2,
         class: "image",
         src: kie,
-        alt: "Error"
+        alt: "Lỗi"
     },
     Wie = {
         class: "text"
@@ -30184,30 +30184,30 @@ const sse = Rr(rse, [
     };
 _n("");
 const ose = {
-        GAME: "Game",
-        PASSWORD: "PASSWORD"
+        GAME: "Trò chơi",
+        PASSWORD: "MẬT KHẨU"
     },
     use = {
-        KICK: "Kick?",
-        KICK_PLAYERS: "KICK PLAYERS",
-        MODERATE: "Moderate",
-        APPROVE_ALL: "Approve All",
-        REJECT_ALL: "Reject All"
+        KICK: "Đuổi?",
+        KICK_PLAYERS: "ĐUỔI NGƯỜI CHƠI",
+        MODERATE: "Kiểm duyệt",
+        APPROVE_ALL: "Đồng ý tất cả",
+        REJECT_ALL: "Từ chối tất cả"
     },
     lse = {
-        ROOM_DESTROYED: "Thanks for helping out!"
+        ROOM_DESTROYED: "Cảm ơn vì đã giúp đỡ!"
     },
     fse = {
-        DISABLED: "Moderation Disabled",
-        KICKED: "KICKED",
-        UNSUPPORTED: "Moderation Unsupported",
-        WAITING_FOR_SUBMISSIONS: "Waiting for submissions"
+        DISABLED: "Kiểm duyệt tắt",
+        KICKED: "ĐÃ ĐUỔI",
+        UNSUPPORTED: "Không hỗ trợ kiểm duyệt",
+        WAITING_FOR_SUBMISSIONS: "Đang đợi câu trả lời"
     },
     cse = {
-        DISABLED: "The moderation setting for this game is turned off. Turn it on and restart the game to moderate content.",
-        UNSUPPORTED: "{gameName} doesn't have anything to moderate, but thanks for wanting to help out!"
+        DISABLED: "Cài đặt kiểm duyệt của trò chơi này bị tắt. Bật và khởi động lại trò chơi để kiểm duyệt nội dung.",
+        UNSUPPORTED: "{gameName} không có thứ gì để kiểm duyệt, nhưng cảm ơn vì đã muốn giúp đỡ!"
     },
-    Ese = "Submitted by:",
+    Ese = "Được gửi bởi:",
     hse = {
         FORM: ose,
         ACTION: use,

@@ -8098,10 +8098,10 @@ const Pa = class Pa {
         return this.htmlEscape(r).trim()
     }
     static sanitizeName(e) {
-        return e.replace(/[^A-Z0-9\u00A1\u0020-\u002F\u00BF-\u00FF\u2026!?*$+\-'_ .,]/gi, "").replace(/'/g, "’")
+        return e.replace(/[^A-Z0-9\u00A1\u0020-\u002F\u00BF-\u00FF\u2026ẢảẠạĂăẮắẰằẲẳẴẵẶặẤấẦầẨẩẪẫẬậĐđẺẻẼẽẸẹẾếỀềỂểỄễỆệỈỉĨĩỊịỎỏỌọỐốỒồỔổỖỗỘộƠơỚớỜờỞởỠỡỢợỦủŨũỤụƯưỨứỪừỬửỮữỰựỲỳỶỷỸỹỴỵ!?*$+\-'_ .,]/gi, "").replace(/'/g, "’")
     }
     static sanitizeInput(e) {
-        return e = e.replace("…", "..."), e.replace(/[^\u00A1\u0020-\u007E\u00BF-\u00FF’]/gi, "")
+        return e = e.replace("…", "..."), e.replace(/[^\u00A1\u0020-\u007E\u00BF-\u00FFẢảẠạĂăẮắẰằẲẳẴẵẶặẤấẦầẨẩẪẫẬậĐđẺẻẼẽẸẹẾếỀềỂểỄễỆệỈỉĨĩỊịỎỏỌọỐốỒồỔổỖỗỘộƠơỚớỜờỞởỠỡỢợỦủŨũỤụƯưỨứỪừỬửỮữỰựỲỳỶỷỸỹỴỵ’]/gi, "")
     }
     static sanitizeEmoji(e) {
         return e.replace(/(\u00a9|\u00ae|[\u2000-\u2017]|[\u2020-\u3300]|\ud83c[\ud000-\udfff]|\ud83d[\ud000-\udfff]|\ud83e[\ud000-\udfff])/, "")
@@ -16644,10 +16644,10 @@ class T1 {
         return String(e).replace(r, "")
     }
     static input(e) {
-        return e.replace("…", "...").replace(/[^\u00A1\u0020-\u007E\u00BF-\u00FF\u2019]/gi, "")
+        return e.replace("…", "...").replace(/[^\u00A1\u0020-\u007E\u00BF-\u00FF\u2019ẢảẠạĂăẮắẰằẲẳẴẵẶặẤấẦầẨẩẪẫẬậĐđẺẻẼẽẸẹẾếỀềỂểỄễỆệỈỉĨĩỊịỎỏỌọỐốỒồỔổỖỗỘộƠơỚớỜờỞởỠỡỢợỦủŨũỤụƯưỨứỪừỬửỮữỰựỲỳỶỷỸỹỴỵ]/gi, "")
     }
     static username(e) {
-        return e.replace(/[^A-Z0-9\u00A1\u0020-\u002F\u00BF-\u00FF\u2026!?*$+\-'_ .,]/gi, "").replace(/'/g, "’")
+        return e.replace(/[^A-Z0-9\u00A1\u0020-\u002F\u00BF-\u00FF\u2026ẢảẠạĂăẮắẰằẲẳẴẵẶặẤấẦầẨẩẪẫẬậĐđẺẻẼẽẸẹẾếỀềỂểỄễỆệỈỉĨĩỊịỎỏỌọỐốỒồỔổỖỗỘộƠơỚớỜờỞởỠỡỢợỦủŨũỤụƯưỨứỪừỬửỮữỰựỲỳỶỷỸỹỴỵ!?*$+\-'_ .,]/gi, "").replace(/'/g, "’")
     }
     static emoji(e) {
         return e.replace(/(\u00A9|\u00AE|[\u2000-\u2017]|[\u2020-\u3300]|\uD83C[\uD000-\uDFFF]|\uD83D[\uD000-\uDFFF]|\uD83E[\uD000-\uDFFF])/, "")
@@ -16657,143 +16657,143 @@ class T1 {
     }
 }
 const n7 = {
-        BACK: "Back",
-        CANCEL: "Cancel",
-        CLOSE: "Close",
-        CONFIRM: "Confirm",
-        CREATE: "Create",
-        DELETE: "Delete",
-        DONE: "Done",
-        EDIT: "Edit",
+        BACK: "Quay lại",
+        CANCEL: "Hủy",
+        CLOSE: "Đóng",
+        CONFIRM: "Xác nhận",
+        CREATE: "Tạo",
+        DELETE: "Xóa",
+        DONE: "Xong",
+        EDIT: "Chỉnh sửa",
         OK: "OK",
-        NEXT: "Next",
-        NO: "No",
-        PLAY: "Play",
-        PUBLISH: "Publish",
-        REMOVE: "Remove",
-        RESET: "Reset",
-        SUBMIT: "Submit",
-        TRY_AGAIN: "Try Again",
-        UNDO: "Undo",
-        YES: "Yes"
+        NEXT: "Tiếp theo",
+        NO: "Không",
+        PLAY: "Chơi",
+        PUBLISH: "Xuất bản",
+        REMOVE: "Xóa",
+        RESET: "Đặt lại",
+        SUBMIT: "Gửi",
+        TRY_AGAIN: "Thử lại",
+        UNDO: "Hoàn tác",
+        YES: "Có"
     },
     i7 = {
         UGC: {
-            VISIBILITY_CONTROLLER_OFF: "prompts hidden on players’ devices",
-            VISIBILITY_CONTROLLER_ON: "prompts shown on players’ devices",
-            VISIBILITY_SCREEN_OFF: "prompts hidden on game screen",
-            VISIBILITY_SCREEN_ON: "prompts shown on game screen"
+            VISIBILITY_CONTROLLER_OFF: "câu hỏi ẩn trên thiết bị của người chơi",
+            VISIBILITY_CONTROLLER_ON: "câu hỏi hiển thị trên thiết bị của người chơi",
+            VISIBILITY_SCREEN_OFF: "câu hỏi ẩn trên màn hình trò chơi",
+            VISIBILITY_SCREEN_ON: "câu hỏi hiển thị trên màn hình trò chơi"
         }
     },
     s7 = {
-        DISCONNECTED: "You have been disconnected.",
-        DRAWING_NOTHING: "You have to draw something!",
-        PLAYER_KICKED: "You have been kicked from the game by a moderator.",
-        ROOM_DESTROYED: "Thanks for playing!",
-        ROOM_DISCONNECTED: "Disconnected",
-        TEXT_NAUGHTY: "I’m afraid you can’t write that. Please be respectful of other players.",
-        TEXT_NOTHING: "You can’t enter nothing!",
-        TITLE: "Error"
+        DISCONNECTED: "Bạn đã bị ngắt kết nối.",
+        DRAWING_NOTHING: "Bạn phải vẽ thứ gì đó!",
+        PLAYER_KICKED: "Bạn đã bị đuổi ra khỏi trò chơi bởi một kiểm duyệt viên.",
+        ROOM_DESTROYED: "Cảm ơn vì đã chơi!",
+        ROOM_DISCONNECTED: "Ngắt kết nối",
+        TEXT_NAUGHTY: "Tôi e rằng bạn không thể viết điều đó. Vui lòng tôn trọng những người chơi khác.",
+        TEXT_NOTHING: "Bạn không thể không nhập gì cả!",
+        TITLE: "Lỗi"
     },
-    a7 = "LOADING",
+    a7 = "ĐANG TẢI",
     o7 = {
-        JOINED_COUNT: "{count} of {maxPlayers} players joined",
-        PLAYERS_NEEDED: "1 player needed to start | {count} players needed to start",
-        WAITING_FOR_VIP: "Waiting for {name} to start the game",
-        WAITING_FOR_GAMEPAD: "Waiting for the game to start",
-        WAITING_FOR_NEW_GAME: "Waiting for a new game to start",
-        GAME_STARTING: "Game is starting",
-        BUTTON_START: "Press to Start",
-        BUTTON_CANCEL: "Press to Cancel"
+        JOINED_COUNT: "{count} trên {maxPlayers} người chơi đã tham gia",
+        PLAYERS_NEEDED: "{count} người chơi nữa để bắt đầu",
+        WAITING_FOR_VIP: "Đợi {name} bắt đầu trò chơi",
+        WAITING_FOR_GAMEPAD: "Đợi trò chơi bắt đầu",
+        WAITING_FOR_NEW_GAME: "Đợi một trò chơi mới bắt đầu",
+        GAME_STARTING: "Trò chơi đang bắt đầu",
+        BUTTON_START: "Nhấn để bắt đầu",
+        BUTTON_CANCEL: "Nhấn để hủy"
     },
     l7 = {
-        GALLERY_LINK: "Visit the Gallery",
-        NEW_GAME_STARTED: "A new game has started",
-        PLAY_AGAIN: "Play again?",
-        THANKS_FOR_PLAYING: "Thanks for playing!",
-        BUTTON_GO_TO_GAME: "Go to game",
-        BUTTON_GO_TO_JACKBOX: "Back to jackbox.tv",
-        BUTTON_SAME_PLAYERS: "Same players",
-        BUTTON_NEW_PLAYERS: "New players"
+        GALLERY_LINK: "Ghé thăm thư viện",
+        NEW_GAME_STARTED: "Một trò chơi mới đã bắt đầu",
+        PLAY_AGAIN: "Chơi lại?",
+        THANKS_FOR_PLAYING: "Cảm ơn vì đã chơi!",
+        BUTTON_GO_TO_GAME: "Đi đến trò chơi",
+        BUTTON_GO_TO_JACKBOX: "Quay lại jackbox.io.vn",
+        BUTTON_SAME_PLAYERS: "Người chơi cũ",
+        BUTTON_NEW_PLAYERS: "Người chơi mới"
     },
     u7 = {
-        AND: "AND",
-        OR: "OR"
+        AND: "VÀ",
+        OR: "HOẶC"
     },
     f7 = {
-        BUTTON_SKIP: "Skip",
-        BUTTON_NEXT: "Next",
-        BUTTON_DONE: "Let’s Go!"
+        BUTTON_SKIP: "Bỏ qua",
+        BUTTON_NEXT: "Tiếp theo",
+        BUTTON_DONE: "Bắt đầu!"
     },
     c7 = {
-        NAME: "AUDIENCE"
+        NAME: "KHÁN GIẢ"
     },
     h7 = {
         CART: {
-            CHECK_OUT: "Check out",
-            EMPTY: "Your cart is empty",
-            TITLE: "Shopping Cart",
-            TOTAL: "Total"
+            CHECK_OUT: "Thanh toán",
+            EMPTY: "Giỏ hàng của bạn trống",
+            TITLE: "Giỏ hàng",
+            TOTAL: "Tổng"
         }
     },
     p7 = {
-        EPISODE_REPORT: "Report Episode",
-        EPISODE_UNLOAD: "Unload Episode",
-        EPISODE_VIEW_AUTHOR: "View Author",
-        EPISODES_LOAD: "Load an episode by id:",
-        EPISODES_MENU: "Episodes Menu",
-        EPISODES_SELECT: "Or select an epsiode:",
-        EPISODES_WARNING: "Warning: user generated content is not rated",
+        EPISODE_REPORT: "Báo cáo tập",
+        EPISODE_UNLOAD: "Xóa tập",
+        EPISODE_VIEW_AUTHOR: "Xem tác giả",
+        EPISODES_LOAD: "Tải một tập bằng id:",
+        EPISODES_MENU: "Menu tập",
+        EPISODES_SELECT: "Hoặc chọn một tập:",
+        EPISODES_WARNING: "Cảnh báo: nội dung do người dùng tạo không được đánh giá",
         INSTRUCTION: {
-            CREATE_TITLE: "first things first, enter a name for the episode that will contain all your prompts and hit create.",
-            LOAD: "create or load?",
-            PUBLISH: "publish your episode",
-            TITLE: "name your episode",
-            TOGGLE_VISIBILITY: "tap to show/hide prompts",
-            WRITE: "write your prompts"
+            CREATE_TITLE: "trước tiên, nhập tên cho tập sẽ chứa tất cả câu hỏi của bạn và nhấn tạo.",
+            LOAD: "tạo hoặc tải?",
+            PUBLISH: "xuất bản tập của bạn",
+            TITLE: "đặt tên tập của bạn",
+            TOGGLE_VISIBILITY: "nhấn để hiển thị/ẩn câu hỏi",
+            WRITE: "viết câu hỏi của bạn"
         },
         WARNING: {
-            DELETE: "Are you sure you want to delete this episode?",
-            TOS: "By sharing content, you agree to our [tos]Terms of Service[/tos]",
-            TOS_AGREE: "agree and share"
+            DELETE: "Bạn có chắc là bạn muốn xóa tập này không?",
+            TOS: "Bằng việc chia sẻ nội dung, bạn đồng ý với [tos]Điều khoản dịch vụ[/tos] của chúng tôi",
+            TOS_AGREE: "đồng ý và chia sẻ"
         },
-        BACK_TO_EPISODES: "back to episodes",
-        BACK_TO_MENU: "back to menu",
-        CREATE_NEW_EPISODE: "create a new episode",
-        PREVIOUS_EPISODES: "previous episodes",
-        PROMPT_ADD: "add prompt",
-        PROMPT_PLACEHOLDER: "enter a prompt",
-        PROMPTS_COUNT_HIDDEN: "({count} hidden)",
-        TITLE_PLACEHOLDER: "enter a title"
+        BACK_TO_EPISODES: "quay lại tập",
+        BACK_TO_MENU: "quay lại menu",
+        CREATE_NEW_EPISODE: "tạo một tập mới",
+        PREVIOUS_EPISODES: "các tập trước",
+        PROMPT_ADD: "thêm câu hỏi",
+        PROMPT_PLACEHOLDER: "nhập một câu hỏi",
+        PROMPTS_COUNT_HIDDEN: "(ẩn {count})",
+        TITLE_PLACEHOLDER: "nhập một tiêu đề"
     },
     E7 = {
         BROADCASTER: {
-            SUBTEXT: "You have successfully connected your account to the Jackbox Audience Kit Twitch Extension.",
-            WARNING: "THIS ROOM DOESN'T HAVE THE AUDIENCE SETTING ENABLED"
+            SUBTEXT: "Bạn đã kết nối thành công tài khoản của mình với Tiện ích mở rộng Twitch Jackbox Audience Kit.",
+            WARNING: "PHÒNG NÀY KHÔNG BẬT CHẾ ĐỘ KHÁN GIẢ"
         },
         RECONNECTED: {
-            TEXT: "RECONNECTED",
-            SUBTEXT: "Have fun!"
+            TEXT: "KẾT NỐI LẠI",
+            SUBTEXT: "Chúc vui vẻ!"
         },
         RECONNECTING: {
             CONTROLLER: {
-                TEXT: "CONNECTION INTERRUPTED",
-                SUBTEXT: "Attempting to reconnect ({attempt} of 5)"
+                TEXT: "KẾT NỐI BỊ GIÁN ĐOẠN",
+                SUBTEXT: "Cố gắng kết nối lại ({attempt} trên 5)"
             },
             GAME: {
-                TEXT: "GAME CONNECTION INTERRUPTED",
-                SUBTEXT: "Please wait while we attempt to reconnect"
+                TEXT: "KẾT NỐI TRÒ CHƠI BỊ GIÁN ĐOẠN",
+                SUBTEXT: "Vui lòng đợi trong khi chúng tôi cố gắng kết nối lại"
             }
         },
         PAUSED: {
-            TEXT: "THE GAME IS PAUSED",
-            SUBTEXT: "Anything you submit will still be sent to the game."
+            TEXT: "TRÒ CHƠI BỊ TẠM DỪNG",
+            SUBTEXT: "Mọi thứ bạn gửi vẫn sẽ được gửi đến trò chơi."
         }
     },
     d7 = {
-        SHARE: "Share",
-        COPY_TO_CLIPBOARD: "Copy to clipboard",
-        COPIED: "Copied"
+        SHARE: "Chia sẻ",
+        COPY_TO_CLIPBOARD: "Sao chép vào bộ nhớ tạm",
+        COPIED: "Đã sao chép"
     },
     g7 = {
         ACTION: n7,
@@ -32797,17 +32797,17 @@ const Sue = t => {
         SWORD_4: "a sword with a length of four grid units"
     },
     Oue = {
-        CHOSEN: "You have chosen",
-        MADNESS: "I'm not crazy!",
-        NONE: "none of these"
+        CHOSEN: "Bạn đã chọn",
+        MADNESS: "Tôi không bị điên!",
+        NONE: "không gì cả"
     },
     Iue = {
-        BUSY: "NUMBER BUSY",
-        CONNECTED: "CONNECTED",
-        WRONG_NUMBER: "WRONG NUMBER"
+        BUSY: "SỐ BẬN",
+        CONNECTED: "ĐÃ KẾT NỐI",
+        WRONG_NUMBER: "SAI SỐ"
     },
     wue = {
-        PROMPT: "Slide your chip to pick a spot to drop"
+        PROMPT: "Trượt chip của bạn để chọn vị trí thả"
     },
     Nue = {
         ALT: Lue,

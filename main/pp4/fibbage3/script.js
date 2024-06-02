@@ -8050,7 +8050,7 @@ const yl = class {
         return e.replace(/[^A-Z0-9\u00A1\u0020-\u002F\u00BF-\u00FF\u2026!?*$+\-'_ .,]/gi, "").replace(/'/g, "\u2019")
     }
     static sanitizeInput(e) {
-        return e.replace(/[^\u00A1\u0020-\u007E\u00BF-\u00FF’]/gi, "")
+        return e.replace(/[^\u00A1\u0020-\u007E\u00BF-\u00FFẢảẠạĂăẮắẰằẲẳẴẵẶặẤấẦầẨẩẪẫẬậĐđẺẻẼẽẸẹẾếỀềỂểỄễỆệỈỉĨĩỊịỎỏỌọỐốỒồỔổỖỗỘộƠơỚớỜờỞởỠỡỢợỦủŨũỤụƯưỨứỪừỬửỮữỰựỲỳỶỷỸỹỴỵ’]/gi, "")
     }
     static sanitizeEmoji(e) {
         return e.replace(/(\u00a9|\u00ae|[\u2000-\u2017]|[\u2020-\u3300]|\ud83c[\ud000-\udfff]|\ud83d[\ud000-\udfff]|\ud83e[\ud000-\udfff])/, "")
@@ -13163,7 +13163,7 @@ const vC = `<form>\r
         <div class="inputGroup">\r
             <textarea id="input-text-textarea" rows="1" class="form-control jbg-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></textarea>\r
             <span class="inlineSubmit">\r
-                <button type="submit" class="btn btn-default inlineSubmitButton" type="button"><span class="inlineSubmitText">Send</span></button>\r
+                <button type="submit" class="btn btn-default inlineSubmitButton" type="button"><span class="inlineSubmitText">Gửi</span></button>\r
             </span>\r
             <span id="helpBlock2" class="help-block errorText"></span>\r
             <div class="charCountDisplay"><span class="charRemaining">70</span></div>\r
@@ -16890,10 +16890,10 @@ const UC = `<div id="controller" class="state-controller controller-content">
             formattedActiveContentId: null,
             isLocal: !1,
             strings: {
-                wait: "Sit back and relax!",
-                vip_waiting: "Waiting for all players to join",
-                vip_canStart: "Press this button when everybody has joined",
-                vip_cancel: "Press this button to cancel game start",
+                wait: "Ngồi xuống và thư giãn!",
+                vip_waiting: "Đợi tất cả mọi người để tham gia",
+                vip_canStart: "Nhấn nút này khi mọi người đã tham gia",
+                vip_cancel: "Nhấn nút này để hủy bắt đầu trò chơi",
                 vip_postgame: "What would you like to do now?",
                 vip_episodes_menu: "Episodes Menu",
                 vip_episodes_unload: "Unload Episode",
@@ -16904,12 +16904,12 @@ const UC = `<div id="controller" class="state-controller controller-content">
                 vip_episodes_back: "Back",
                 vip_episodes_submit: "SUBMIT",
                 vip_episodes_view_author: "View Author",
-                button_start: "Everybody's In",
-                button_cancel: "Cancel",
-                button_changename: "Change Name",
-                button_sameplayers: "Same Players",
-                button_newplayers: "New Players",
-                prompt_entername: "Enter your name",
+                button_start: "Mọi người có mặt",
+                button_cancel: "Hủy",
+                button_changename: "Đổi tên",
+                button_sameplayers: "Người chơi cũ",
+                button_newplayers: "Người chơi mới",
+                prompt_entername: "Nhập tên của bạn",
                 prompt_choosecharacter: "Select your character",
                 button_censorOptions: "Censor Options",
                 censor_prompt: ""
@@ -21155,17 +21155,17 @@ const Gx = xt.View.extend({
             </div>
             <span class="inlineSubmit">
                 <div class="col-xs-6">
-                    <button type="button" class="btn btn-block lieForMe" type="button">Lie For Me</button>
+                    <button type="button" class="btn btn-block lieForMe" type="button">Nói dối hộ tôi</button>
                 </div>
                 <div class="col-xs-6">
-                    <button type="submit" class="btn btn-block submitButton" type="button">Send</button>
+                    <button type="submit" class="btn btn-block submitButton" type="button">Gửi</button>
                 </div>
             </span>
         </div>
     </div>
 </div>
 <div class="entryDone">
-    Thank you! Your entry: <span class="entryText">entryText</span>
+    Cảm ơn! Bạn đã nhập: <span class="entryText">entryText</span>
 </div>
 </form>`,
     Jx = us.extend({
@@ -21283,7 +21283,7 @@ const Gx = xt.View.extend({
             this.shouldSubmit && this.onChildviewInputSubmit()
         },
         update() {
-            rs.prototype.update.apply(this), this.model.get("requireLie") === !0 && this.inputComponent.model.set("answerDelim", "Write one LIE about yourself."), this.inputComponent.model.set("doubleInput", this.model.get("requireLie") || this.model.get("doubleInput")), this.inputComponent.model.set("canUseSuggestions", this.model.get("canUseSuggestions")), this.inputComponent.model.set("usedSuggestion", this.model.get("usedSuggestion")), this.inputComponent.model.set("question", this.model.get("question")), this.model.get("entry") && this.model.get("entry").length > 0 ? this.buttonsCollection.reset() : this.model.get("suggestions") && this.buttonsCollection.set(this.model.get("suggestions").map(t => ({
+            rs.prototype.update.apply(this), this.model.get("requireLie") === !0 && this.inputComponent.model.set("answerDelim", "Viết một LỜI NÓI DỐI về bản thân."), this.inputComponent.model.set("doubleInput", this.model.get("requireLie") || this.model.get("doubleInput")), this.inputComponent.model.set("canUseSuggestions", this.model.get("canUseSuggestions")), this.inputComponent.model.set("usedSuggestion", this.model.get("usedSuggestion")), this.inputComponent.model.set("question", this.model.get("question")), this.model.get("entry") && this.model.get("entry").length > 0 ? this.buttonsCollection.reset() : this.model.get("suggestions") && this.buttonsCollection.set(this.model.get("suggestions").map(t => ({
                 block: !0,
                 text: t
             })))
@@ -21329,7 +21329,7 @@ const Gx = xt.View.extend({
                 observe: "customerBlob",
                 onGet(t) {
                     let e = "audience";
-                    return t ? (t.displayName ? e = t.displayName : t.name && (e = t.name), e.toUpperCase()) : "audience"
+                    return t ? (t.displayName ? e = t.displayName : t.name && (e = t.name), e.toUpperCase()) : "khán giả"
                 }
             },
             "#playericon": {
@@ -21398,9 +21398,9 @@ const tE = $x.extend({
                 className: S
             }
         })), t.state === "CategorySelection" && (t.state = "MakeSingleChoice", t.classes = ["CategorySelection"], t.prompt = t.isChoosing ? {
-            text: "Pick a Category"
+            text: "Chọn một danh mục"
         } : {
-            text: `${t.choosingPlayerName} is picking a category`
+            text: `${t.choosingPlayerName} đang chọn một danh mục`
         }, t.choices = t.choices && t.isChoosing ? t.choices.map((e, n) => ({
             text: e,
             order: n,

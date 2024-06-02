@@ -16886,10 +16886,10 @@ const cc = Et.View.extend({
             formattedActiveContentId: null,
             isLocal: !1,
             strings: {
-                wait: "Sit back and relax!",
-                vip_waiting: "Waiting for all players to join",
-                vip_canStart: "Press this button when everybody has joined",
-                vip_cancel: "Press this button to cancel game start",
+                wait: "Ngồi xuống và thư giãn!",
+                vip_waiting: "Đợi tất cả người chơi để tham gia",
+                vip_canStart: "Nhấn nút này khi mọi người đã tham gia",
+                vip_cancel: "Nhấn nút này để hủy bắt đầu trò chơi",
                 vip_postgame: "What would you like to do now?",
                 vip_episodes_menu: "Episodes Menu",
                 vip_episodes_unload: "Unload Episode",
@@ -16897,14 +16897,14 @@ const cc = Et.View.extend({
                 vip_episodes_warning: "Warning: user generated content is not rated",
                 vip_episodes_load: "Load an episode by id:",
                 vip_episodes_select: "Or select an episode:",
-                vip_episodes_back: "Back",
-                vip_episodes_submit: "SUBMIT",
+                vip_episodes_back: "Quay lại",
+                vip_episodes_submit: "GỬI",
                 vip_episodes_view_author: "View Author",
-                button_start: "Everybody's In",
-                button_cancel: "Cancel",
+                button_start: "Mọi người có mặt",
+                button_cancel: "Hủy",
                 button_changename: "Change Name",
-                button_sameplayers: "Same Players",
-                button_newplayers: "New Players",
+                button_sameplayers: "Người chơi cũ",
+                button_newplayers: "Người chơi mới",
                 prompt_entername: "Enter your name",
                 prompt_choosecharacter: "Select your character",
                 button_censorOptions: "Censor Options",
@@ -21121,8 +21121,8 @@ const jx = Et.View.extend({
             <div class="container">\r
                 <br /><span id="auction-lobby-text" class="big-text"></span><br />\r
                 <form class="pure-form">                    \r
-                    <button type="button" id="auction-startgame" class="button-auction button-xlarge pure-button pure-input-1">EVERYBODY'S IN</button>\r
-                    <button type="button" id="auction-stopcountdown" class="button-auction button-xlarge pure-button pure-input-1">CANCEL</button>  \r
+                    <button type="button" id="auction-startgame" class="button-auction button-xlarge pure-button pure-input-1">MỌI NGƯỜI CÓ MẶT</button>\r
+                    <button type="button" id="auction-stopcountdown" class="button-auction button-xlarge pure-button pure-input-1">HỦY</button>  \r
                 </form>\r
             </div>\r
         </div>\r
@@ -21134,26 +21134,26 @@ const jx = Et.View.extend({
         </div>\r
         \r
         <div id="state-draw" class="pt-page-off pushed-down-page auction-page">\r
-            <span id="title" class="big-text">please draw:</span><br />\r
+            <span id="title" class="big-text">vui lòng vẽ:</span><br />\r
 \r
             <canvas id="auction-sketchpad" class="sketchpad" width='240' height='300' style='background-color:white;'>\r
                 Sorry, your browser is not supported.\r
             </canvas>\r
             \r
             <form class="pure-form container">\r
-                <button type="submit" id="auction-submitdrawing" class="submit-drawing button-auction button-large pure-button pure-input-1" style="margin-top: 0px;"><i class="fas fa-paper-plane"></i>&nbsp;&nbsp;send</button>\r
+                <button type="submit" id="auction-submitdrawing" class="submit-drawing button-auction button-large pure-button pure-input-1" style="margin-top: 0px;"><i class="fas fa-paper-plane"></i>&nbsp;&nbsp;gửi</button>\r
                 <div id="auction-submitdrawing-loading" style="display:none;" class="button-auction-loading"></div>\r
             </form>\r
         </div>\r
         \r
         <div id="state-done-drawing" class="pt-page-off pushed-down-page auction-page">\r
-            <br/><span class="big-text">Thanks for the drawings!</span><br/>\r
+            <br/><span class="big-text">Cảm ơn về bức vẽ!</span><br/>\r
         </div>\r
         \r
         <div id="state-auction" class="pt-page-off auction-page">\r
             <div id="available-cash"><h1 id="auction-money">$XXXXX</h1></div>\r
             <div id="auction-info"><div class="auction-centered-content" id="auction-centered-info"></div></div>\r
-            <div id="auction-skip-content"><button type="button" id="auction-skip-button" class="button-auction button-large pure-button pure-input-1">Skip</button></div>\r
+            <div id="auction-skip-content"><button type="button" id="auction-skip-button" class="button-auction button-large pure-button pure-input-1">Bỏ qua</button></div>\r
             <div id="auction-bid-buttons"></div>\r
             <div id="auction-screw-content"></div>\r
             <div id="auction-cashgrab-content"></div>\r
@@ -21165,8 +21165,8 @@ const jx = Et.View.extend({
             <div class="container">\r
                 <br /><span id="auction-post-game-text" class="big-text"></span><br />\r
                 <form class="pure-form">                    \r
-                    <button type="button" id="auction-sameplayers" class="button-auction  button-xlarge pure-button pure-input-1 auction-endbuttons">SAME PLAYERS</button>\r
-                    <button type="button" id="auction-newplayers" class="button-auction  button-xlarge pure-button pure-input-1 auction-endbuttons">NEW PLAYERS</button>    \r
+                    <button type="button" id="auction-sameplayers" class="button-auction  button-xlarge pure-button pure-input-1 auction-endbuttons">NGƯỜI CHƠI CŨ</button>\r
+                    <button type="button" id="auction-newplayers" class="button-auction  button-xlarge pure-button pure-input-1 auction-endbuttons">NGƯỜI CHƠI MỚI</button>    \r
                 </form>\r
             </div>\r
             \r
@@ -21228,18 +21228,18 @@ const Xx = cc.extend({
                 return
             }
             if (this.hideLobbyButtons(), !e.isAllowedToStartGame) {
-                _e("#auction-lobby-text").html("sit back and relax!"), this.showScreen("#state-lobby");
+                _e("#auction-lobby-text").html("ngồi xuống và thư giãn!"), this.showScreen("#state-lobby");
                 return
             }
             const m = t.lobbyState;
-            m === "WaitingForMore" ? _e("#auction-lobby-text").html("waiting for all players to join") : m === "CanStart" ? (_e("#auction-lobby-text").html("press this button when everybody has joined"), _e("#auction-startgame").show()) : m === "Countdown" && (_e("#auction-lobby-text").html("press this button to cancel game start"), _e("#auction-stopcountdown").show()), this.showScreen("#state-lobby")
+            m === "WaitingForMore" ? _e("#auction-lobby-text").html("đợi tất cả người chơi tham gia") : m === "CanStart" ? (_e("#auction-lobby-text").html("nhấn nút này khi mọi người đã tham gia"), _e("#auction-startgame").show()) : m === "Countdown" && (_e("#auction-lobby-text").html("nhấn nút này để hủy bắt đầu trò chơi"), _e("#auction-stopcountdown").show()), this.showScreen("#state-lobby")
         } else if (i === "Gameplay_Logo") this.showScreen("#state-logo");
         else if (i === "Gameplay_Draw" && n === "Gameplay_Draw") {
             if (!e.title) {
                 this.showScreen("#state-done-drawing");
                 return
             }
-            this.titleThatImDrawing = e.title, _e("#page-auction #state-draw #title").html(`Please Draw : ${this.titleThatImDrawing.text}`), this.showScreen("#state-draw");
+            this.titleThatImDrawing = e.title, _e("#page-auction #state-draw #title").html(`Vui lòng vẽ : ${this.titleThatImDrawing.text}`), this.showScreen("#state-draw");
             const m = this.$("#auction-sketchpad")[0],
                 _ = m.getContext("2d"),
                 k = _e("#state-draw #title").outerHeight(!0) + _e("#auction-submitdrawing").outerHeight(!0) + 10;
@@ -21248,7 +21248,7 @@ const Xx = cc.extend({
             _e("#auction-money").html(this.formatMoney(e.money));
             let m = "";
             if (e.info && e.message)
-                for (f = 0; f < e.info.length; f++) m += '<div class="auction-info-content text-content">', m += `<p>${e.info[f].title} is worth ${this.formatMoney(e.info[f].value)}</p>`, m += "</div>";
+                for (f = 0; f < e.info.length; f++) m += '<div class="auction-info-content text-content">', m += `<p>${e.info[f].title} có trị giá ${this.formatMoney(e.info[f].value)}</p>`, m += "</div>";
             _e("#auction-info").css("display", m.length > 0 ? "block" : "none"), _e("#auction-centered-info").html(m), _e("#auction-skip-content").css("display", t.skip ? "block" : "none"), this.onAuctionMessage(e.message);
             const _ = t.currentBidderId !== this.model.id;
             let k = "";
@@ -21261,15 +21261,15 @@ const Xx = cc.extend({
                 if (t.screwingPlayerId)
                     if (t.screwingPlayerId === this.client.userId)
                         for (f = 0; f < t.playersToScrew.length; f++) R += `<button type="button" data-player="${t.playersToScrew[f].id}" class="pure-input-1 button-large pure-button button-auction auction-screw-player-button">${t.playersToScrew[f].name}</button>`;
-                    else R = "<span class='big-text'><p>Another player is screwing, hold your horses</p></span>";
-                else t.bids && (R = `<button type="button" class="pure-input-1 button-large pure-button button-auction auction-screw-button"${V?"":" disabled"}>SCREW</button>`)
+                    else R = "<span class='big-text'><p>Người chơi khác đang sử dụng đinh, hãy kiên nhẫn</p></span>";
+                else t.bids && (R = `<button type="button" class="pure-input-1 button-large pure-button button-auction auction-screw-button"${V?"":" disabled"}>ĐINH</button>`)
             } else R = "";
             _e("#auction-screw-content").html(R);
             let D = "";
             if (t.playerSignalledForBank !== void 0) {
                 let V, X;
-                t.playerSignalledForBank ? (V = !0, X = "BANK CALLED") : e.numLoans >= 3 ? (V = !0, X = "BAD CREDIT") : e.timesOpenedBank >= 3 ? (V = !0, X = "STOP CALLING") : (V = !1, X = "CALL THE BANK"), D += `<button type="button" class="pure-input-1 button-large pure-button button-auction auction-open-bank-button"${V?" disabled":""}>${X}</button><br>`
-            } else t.loanAmount !== void 0 && t.debtAmount !== void 0 && e.hasTakenOutLoanInCurrentBank !== void 0 && (e.numLoans >= 3 ? D += `<span class="big-text"><p>You've taken out 3 loans already. No more for you!</p></span>` : (D += `<span class="big-text"><p>You will receive : ${this.formatMoney(t.loanAmount)}, and owe ${this.formatMoney(t.debtAmount)}</p></span>`, D += `<button type="button" class="pure-input-1 button-large pure-button button-auction auction-take-loan-button"${e.hasTakenOutLoanInCurrentBank?" disabled":""}>GET A LOAN</button><br>`));
+                t.playerSignalledForBank ? (V = !0, X = "ĐÃ GỌI NGÂN HÀNG") : e.numLoans >= 3 ? (V = !0, X = "TÍN DỤNG XẤU") : e.timesOpenedBank >= 3 ? (V = !0, X = "NGƯNG GỌI") : (V = !1, X = "GỌI NGÂN HÀNG"), D += `<button type="button" class="pure-input-1 button-large pure-button button-auction auction-open-bank-button"${V?" disabled":""}>${X}</button><br>`
+            } else t.loanAmount !== void 0 && t.debtAmount !== void 0 && e.hasTakenOutLoanInCurrentBank !== void 0 && (e.numLoans >= 3 ? D += `<span class="big-text"><p>You've taken out 3 loans already. No more for you!</p></span>` : (D += `<span class="big-text"><p>Bạn sẽ nhận : ${this.formatMoney(t.loanAmount)}, và nợ ${this.formatMoney(t.debtAmount)}</p></span>`, D += `<button type="button" class="pure-input-1 button-large pure-button button-auction auction-take-loan-button"${e.hasTakenOutLoanInCurrentBank?" disabled":""}>VAY TIỀN</button><br>`));
             _e("#auction-bank-content").html(D), this.showScreen("#state-auction")
         } else if (i && i === "PostGame") {
             if (!this.client.isRole("player")) {
@@ -21277,10 +21277,10 @@ const Xx = cc.extend({
                 return
             }
             if (this.hideLobbyButtons(), !e.isAllowedToMakeChoice) {
-                _e("#auction-lobby-text").html("sit back and relax!"), this.showScreen("#state-post-game");
+                _e("#auction-lobby-text").html("ngồi xuống và thư giãn!"), this.showScreen("#state-post-game");
                 return
             }
-            _e("#auction-post-game-text").html("make your choice"), _e(".auction-endbuttons").show(), this.showScreen("#state-post-game")
+            _e("#auction-post-game-text").html("đưa ra quyết định của bạn"), _e(".auction-endbuttons").show(), this.showScreen("#state-post-game")
         }
     },
     hideLobbyButtons() {
@@ -21360,13 +21360,13 @@ const Xx = cc.extend({
         if (!t || this.lastMessage && this.lastMessage.id === t.id) return;
         this.lastMessage = t;
         const e = await Gx(Object.assign({
-            "../images/bank_arrow.png": () => Ri(() => import("main/pp2/auction/assets/bank_arrow.bc369641.js"), []),
-            "../images/buyer0_arrow.png": () => Ri(() => import("main/pp2/auction/assets/buyer0_arrow.2c1457f7.js"), []),
-            "../images/buyer1_arrow.png": () => Ri(() => import("main/pp2/auction/assets/buyer1_arrow.6488b809.js"), []),
-            "../images/buyer2_arrow.png": () => Ri(() => import("main/pp2/auction/assets/buyer2_arrow.74324be2.js"), []),
-            "../images/dog_arrow.png": () => Ri(() => import("main/pp2/auction/assets/dog_arrow.035272f5.js"), []),
-            "../images/greg_arrow.png": () => Ri(() => import("main/pp2/auction/assets/greg_arrow.a4543b5d.js"), []),
-            "../images/oldman_arrow.png": () => Ri(() => import("main/pp2/auction/assets/oldman_arrow.80ef9f3e.js"), [])
+            "../images/bank_arrow.png": () => Ri(() => import("./assets/bank_arrow.bc369641.js"), []),
+            "../images/buyer0_arrow.png": () => Ri(() => import("./assets/buyer0_arrow.2c1457f7.js"), []),
+            "../images/buyer1_arrow.png": () => Ri(() => import("./assets/buyer1_arrow.6488b809.js"), []),
+            "../images/buyer2_arrow.png": () => Ri(() => import("./assets/buyer2_arrow.74324be2.js"), []),
+            "../images/dog_arrow.png": () => Ri(() => import("./assets/dog_arrow.035272f5.js"), []),
+            "../images/greg_arrow.png": () => Ri(() => import("./assets/greg_arrow.a4543b5d.js"), []),
+            "../images/oldman_arrow.png": () => Ri(() => import("./assets/oldman_arrow.80ef9f3e.js"), [])
         }), `../images/${t.sender.id}_arrow.png`);
         this.htmlWhenOff = "", this.htmlWhenOff += `<div class="auction-messager"><img src="${e.default}"></div>`, this.htmlWhenOff += `<div class="message-content text-content"><p>${t.text}</p></div>`;
         const n = _e("#auction-message"),

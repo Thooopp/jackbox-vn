@@ -23732,7 +23732,8 @@ li>a.button-color.active[data-color="#000000"] {
     font-weight: 700;
     text-align: left;
     flex-grow: 2;
-    padding: 5px
+    padding: 5px;
+    line-height: 1.6
 }
 
 .awshirt-input-submit {

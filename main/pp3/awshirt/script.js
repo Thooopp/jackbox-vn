@@ -22615,10 +22615,10 @@ const wc = ph.exports,
                 <div id="lobby-main-menu"> 
                     <span id="awshirt-lobby-text" class="awshirt-lobby-text"></span>
                     <form class="pure-form">                     
-                        <button type="button" id="awshirt-startgame" class="awshirt-button button-xlarge pure-button pure-input-1">FIGHT</button> 
-                        <button type="button" id="awshirt-stopcountdown" class="awshirt-button  button-xlarge pure-button pure-input-1">CANCEL</button> 
-                        <button type="button" id="awshirt-sameplayers" class="awshirt-button  button-xlarge pure-button pure-input-1 awshirt-endbuttons">SAME PLAYERS</button> 
-                        <button type="button" id="awshirt-newplayers" class="awshirt-button  button-xlarge pure-button pure-input-1 awshirt-endbuttons">NEW PLAYERS</button>     
+                        <button type="button" id="awshirt-startgame" class="awshirt-button button-xlarge pure-button pure-input-1">CHIẾN ĐẤU</button> 
+                        <button type="button" id="awshirt-stopcountdown" class="awshirt-button  button-xlarge pure-button pure-input-1">HỦY</button> 
+                        <button type="button" id="awshirt-sameplayers" class="awshirt-button  button-xlarge pure-button pure-input-1 awshirt-endbuttons">NGƯỜI CHƠI CŨ</button> 
+                        <button type="button" id="awshirt-newplayers" class="awshirt-button  button-xlarge pure-button pure-input-1 awshirt-endbuttons">NGƯỜI CHƠI MỚI</button>     
                     </form> 
  
                     <form class="pure-form"> 
@@ -22645,10 +22645,10 @@ const wc = ph.exports,
                     </div>
                     <form>
                         <div id="awshirt-taunt-input-group" class="form-group">
-                            <label for="awshirt-taunt-text" class="awshirt-lobby-text">Victory Quote</label>
+                            <label for="awshirt-taunt-text" class="awshirt-lobby-text">Câu nói chiến thắng</label>
                             <div class="awshirt-button-group awshirt-taunt-group">
-                                <input id="awshirt-taunt-text" type="text" class="awshirt-input-text" placeholder="VICTORY QUOTE" autocapitalize='off' autocorrect='off' autocomplete='off' maxLength="70">
-                                <button id="awshirt-taunt-submit" class="awshirt-button-submit btn" type="submit" disabled>SET</button>
+                                <input id="awshirt-taunt-text" type="text" class="awshirt-input-text" placeholder="CÂU NÓI CHIẾN THẮNG" autocapitalize='off' autocorrect='off' autocomplete='off' maxLength="70">
+                                <button id="awshirt-taunt-submit" class="awshirt-button-submit btn" type="submit" disabled>ĐẶT</button>
                             </div>
                         </div>
                     </form>

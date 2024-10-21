@@ -8046,7 +8046,7 @@ const fl = class {
         return t.replace(/[^A-Z0-9\u00A1\u0020-\u002F\u00BF-\u00FFẢảẠạĂăẮắẰằẲẳẴẵẶặẤấẦầẨẩẪẫẬậĐđẺẻẼẽẸẹẾếỀềỂểỄễỆệỈỉĨĩỊịỎỏỌọỐốỒồỔổỖỗỘộƠơỚớỜờỞởỠỡỢợỦủŨũỤụƯưỨứỪừỬửỮữỰựỲỳỶỷỸỹỴỵ\u2026!?*$+\-'_ .,]/gi, "").replace(/'/g, "\u2019")
     }
     static sanitizeInput(t) {
-        return t.replace(/[^\u00A1\u0020-\u007E\u00BF-\u00FFẢảẠạĂăẮắẰằẲẳẴẵẶặẤấẦầẨẩẪẫẬậĐđẺẻẼẽẸẹẾếỀềỂểỄễỆệỈỉĨĩỊịỎỏỌọỐốỒồỔổỖỗỘộƠơỚớỜờỞởỠỡỢợỦủŨũỤụƯưỨứỪừỬửỮữỰựỲỳỶỷỸỹỴỵ’]/gi, "")
+        return InputSanitizerVN(t)
     }
     static sanitizeEmoji(t) {
         return t.replace(/(\u00a9|\u00ae|[\u2000-\u2017]|[\u2020-\u3300]|\ud83c[\ud000-\udfff]|\ud83d[\ud000-\udfff]|\ud83e[\ud000-\udfff])/, "")
@@ -23456,7 +23456,7 @@ const ux = `url("data:image/svg+xml;utf8,<svg id='Layer_1' data-name='Layer 1' x
             return e = this.sanitizeInput(e).replace(/'/g, "\u2019"), Ze.htmlEscape(e).trim()
         },
         sanitizeInput(e) {
-            return e = e.replace(/[^A-Z0-9\u00A1\u0020-\u002F\u00BF-\u00FFẢảẠạĂăẮắẰằẲẳẴẵẶặẤấẦầẨẩẪẫẬậĐđẺẻẼẽẸẹẾếỀềỂểỄễỆệỈỉĨĩỊịỎỏỌọỐốỒồỔổỖỗỘộƠơỚớỜờỞởỠỡỢợỦủŨũỤụƯưỨứỪừỬửỮữỰựỲỳỶỷỸỹỴỵ!?*$+\-’'_ .,=<>:;]/gi, ""), e
+            return InputSanitizerVN(t.replace("…", "..."))
         },
         validateInput(e) {
             const t = lt(e.target);
@@ -23471,4 +23471,15 @@ const ux = `url("data:image/svg+xml;utf8,<svg id='Layer_1' data-name='Layer 1' x
 UC({
     MainView: hx
 });
+function InputSanitizerVN(a) {
+    let valids = "‚ !\"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyzẢẠẰẮẲẴẶẤẦẨẪẬĐẺẼẸẾỀỂỄỆỈĨỊỎỌỐỒỔỖỘỚỜỞỠỢỦŨỤỨỪỬỮỰỲỶỸỴảạằắẳẵặấầẩẫậđẻẽẹếềểễệỉĩịỏọốồổỗộớờởỡợủũụứừửữựỳỷỹỵ‘’“”„[]".split("");
+    let ia = a.split("");
+    let oa = "";
+    for (let i = 0; i < ia.length; i++) {
+        if (valids.includes(ia[i])) {
+            oa += ia[i];
+        }
+    }
+    return oa;
+}
 //# sourceMappingURL=f2516dba.js.map

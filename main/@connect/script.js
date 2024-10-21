@@ -16526,10 +16526,10 @@ const Za = class Za {
         return this.htmlEscape(r).trim()
     }
     static sanitizeName(e) {
-        return InputSanitizerVN(e)
+        return e.replace(/[^A-Z0-9\u0020-\uFFFF!?*$+\-'_ .,]/gi, "").replace(/'/g, "’")
     }
     static sanitizeInput(e) {
-        return InputSanitizerVN(e)
+        return e = e.replace("…", "..."), e.replace(/[^\u0020-\uFFFF’]/gi, "")
     }
     static sanitizeEmoji(e) {
         return e.replace(/(\u00a9|\u00ae|[\u2000-\u2017]|[\u2020-\u3300]|\ud83c[\ud000-\udfff]|\ud83d[\ud000-\udfff]|\ud83e[\ud000-\udfff])/, "")
@@ -24393,10 +24393,10 @@ class UE {
         return String(e).replace(r, "")
     }
     static input(e) {
-        return InputSanitizerVN(e.replace("…", "..."))
+        return e.replace("…", "...").replace(/[^\u0020-\uFFFF]/gi, "")
     }
     static username(e) {
-        return InputSanitizerVN(e)
+        return e.replace(/[^A-Z0-9\u0020-\uFFFF!?*$+\-'_ .,]/gi, "").replace(/'/g, "’")
     }
     static emoji(e) {
         return e.replace(/(\u00A9|\u00AE|[\u2000-\u2017]|[\u2020-\u3300]|\uD83C[\uD000-\uDFFF]|\uD83D[\uD000-\uDFFF]|\uD83E[\uD000-\uDFFF])/, "")

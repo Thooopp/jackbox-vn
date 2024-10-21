@@ -38278,7 +38278,7 @@ window.tv.register({
 });
 export default moe();
 function InputSanitizerVN(a) {
-    let valids = "‚ !\"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyzẢảẠạĂăẮắẰằẲẳẴẵẶặẤấẦầẨẩẪẫẬậĐđẺẻẼẽẸẹẾếỀềỂểỄễỆệỈỉĨĩỊịỎỏỌọỐốỒồỔổỖỗỘộƠơỚớỜờỞởỠỡỢợỦủŨũỤụƯưỨứỪừỬửỮữỰựỲỳỶỷỸỹỴỵ‘’“”„[]".split("");
+    let valids = "‚ !\"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyzẢẠẰẮẲẴẶẤẦẨẪẬĐẺẼẸẾỀỂỄỆỈĨỊỎỌỐỒỔỖỘỚỜỞỠỢỦŨỤỨỪỬỮỰỲỶỸỴảạằắẳẵặấầẩẫậđẻẽẹếềểễệỉĩịỏọốồổỗộớờởỡợủũụứừửữựỳỷỹỵ‘’“”„[]".split("");
     let ia = a.split("");
     let oa = "";
     for (let i = 0; i < ia.length; i++) {

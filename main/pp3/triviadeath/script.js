@@ -8043,10 +8043,10 @@ const fl = class {
         return this.htmlEscape(n).trim()
     }
     static sanitizeName(e) {
-        return e.replace(/[^A-Z0-9\u00A1\u0020-\u002F\u00BF-\u00FF\u2026ẢảẠạĂăẮắẰằẲẳẴẵẶặẤấẦầẨẩẪẫẬậĐđẺẻẼẽẸẹẾếỀềỂểỄễỆệỈỉĨĩỊịỎỏỌọỐốỒồỔổỖỗỘộƠơỚớỜờỞởỠỡỢợỦủŨũỤụƯưỨứỪừỬửỮữỰựỲỳỶỷỸỹỴỵ!?*$+\-'_ .,]/gi, "").replace(/'/g, "\u2019")
+        return e.replace(/[^A-Z0-9\u0020-\uFFFF!?*$+\-'_ .,]/gi, "").replace(/'/g, "\u2019")
     }
     static sanitizeInput(e) {
-        return InputSanitizerVN(e)
+        return e.replace(/[^\u0020-\uFFFF’]/gi, "")
     }
     static sanitizeEmoji(e) {
         return e.replace(/(\u00a9|\u00ae|[\u2000-\u2017]|[\u2020-\u3300]|\ud83c[\ud000-\udfff]|\ud83d[\ud000-\udfff]|\ud83e[\ud000-\udfff])/, "")
@@ -21546,7 +21546,7 @@ const Gx = VC.extend({
         }), !1
     },
     sanitize(t) {
-        return InputSanitizerVN(t.replace("…", "..."))
+        return t.replace(/[^A-Z0-9\u0020-\uFFFF!?*$+\-’'_ .,:]/gi, "").replace(/'/g, "\u2019").trim()
     },
     onResize() {
         const t = se(window).width(),
@@ -21557,15 +21557,4 @@ const Gx = VC.extend({
 jx({
     MainView: Gx
 });
-function InputSanitizerVN(a) {
-    let valids = "‚ !\"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyzẢẠẰẮẲẴẶẤẦẨẪẬĐẺẼẸẾỀỂỄỆỈĨỊỎỌỐỒỔỖỘỚỜỞỠỢỦŨỤỨỪỬỮỰỲỶỸỴảạằắẳẵặấầẩẫậđẻẽẹếềểễệỉĩịỏọốồổỗộớờởỡợủũụứừửữựỳỷỹỵ‘’“”„[]".split("");
-    let ia = a.split("");
-    let oa = "";
-    for (let i = 0; i < ia.length; i++) {
-        if (valids.includes(ia[i])) {
-            oa += ia[i];
-        }
-    }
-    return oa;
-}
 //# sourceMappingURL=9c21aecf.js.map

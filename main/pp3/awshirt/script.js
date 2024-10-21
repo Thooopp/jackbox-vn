@@ -8043,10 +8043,10 @@ const fl = class {
         return this.htmlEscape(n).trim()
     }
     static sanitizeName(t) {
-        return t.replace(/[^A-Z0-9\u00A1\u0020-\u002F\u00BF-\u00FFẢảẠạĂăẮắẰằẲẳẴẵẶặẤấẦầẨẩẪẫẬậĐđẺẻẼẽẸẹẾếỀềỂểỄễỆệỈỉĨĩỊịỎỏỌọỐốỒồỔổỖỗỘộƠơỚớỜờỞởỠỡỢợỦủŨũỤụƯưỨứỪừỬửỮữỰựỲỳỶỷỸỹỴỵ\u2026!?*$+\-'_ .,]/gi, "").replace(/'/g, "\u2019")
+        return t.replace(/[^A-Z0-9\u0020-\uFFFF\u2026!?*$+\-'_ .,]/gi, "").replace(/'/g, "\u2019")
     }
     static sanitizeInput(t) {
-        return InputSanitizerVN(t)
+        return t.replace(/[^\u0020-\uFFFF’]/gi, "")
     }
     static sanitizeEmoji(t) {
         return t.replace(/(\u00a9|\u00ae|[\u2000-\u2017]|[\u2020-\u3300]|\ud83c[\ud000-\udfff]|\ud83d[\ud000-\udfff]|\ud83e[\ud000-\udfff])/, "")
@@ -22747,7 +22747,7 @@ const wc = ph.exports,
                 <div class="col-xs-12 awshirt-button-bar post-sketchpad">
                     <button type="button" id="awshirt-drawing-audience-censor" class="awshirt-audience-censor awshirt-button capitalize btn btn-block">CENSOR AUDIENCE</button>
                     <button id="awshirt-suggestdraw" class='awshirt-button-suggestion awshirt-suggestion awshirt-button btn btn-block'> 
-                        <span id="awshirt-instructions" class='awshirt-text-instruction awshirt-text drawing-instructions'>SUGGESTION</span>
+                        <span id="awshirt-instructions" class='awshirt-text-instruction awshirt-text drawing-instructions'>GỢI Ý</span>
                     </button> 
 
                     <p class="awshirt-text-instruction">
@@ -22782,7 +22782,7 @@ const wc = ph.exports,
                                 <li class="pull-right">
                                     <div class="awshirt-button-pad">
                                         <button id="awshirt-suggesttitle" class="awshirt-suggestion awshirt-button button-input">
-                                            SUGGESTION
+                                            GỢI Ý
                                         </button>
                                     </div>
                                 </li>
@@ -22808,7 +22808,7 @@ const wc = ph.exports,
                     <td style="vertical-align:top;">
                         <div class="awshirt-solid-bg">
                             <div class="canvas-container">
-                                <div class="pre-sketchpad-shirt awshirt-text">CHOOSE A DRAWING</div>
+                                <div class="pre-sketchpad-shirt awshirt-text">CHỌN MỘT BỨC VẼ</div>
                                 <div id="awshirt-shirttime-canvas" class="awshirt-canvas-container-box">
                                     <div class="glideShirts">
                                         <div id="awshirt-image-bullets" class="glide__bullets" data-glide-el="controls[nav]">
@@ -22847,7 +22847,7 @@ const wc = ph.exports,
                                         </div>
                                     </div>
                                 </div>
-                                <div class="pre-sketchpad-shirt awshirt-text">CHOOSE A SLOGAN</div>
+                                <div class="pre-sketchpad-shirt awshirt-text">CHỌN MỘT SLOGAN</div>
                                 <div class="pre-sketchpad-shirt">
                                     <button type="submit-shirt" id="awshirt-submit-shirt" class="submit-drawing awshirt-button awshirt-button-submit"><i class="fas fa-check" aria-hidden="true"></i></button>
                                     <div id="awshirt-submitshirt-loading" style="display:none;" class="awshirt-button-loading">
@@ -22881,7 +22881,7 @@ const wc = ph.exports,
                 <fieldset>
 
                     <label id="awshirt-audience-suggestion-instruction" for="audience-suggestion"></label>
-                    <input id="awshirt-audience-suggestion" class="pure-input-1 capitalize awshirt-answer-input" type="text" placeholder="ENTER A SUGGESTION" maxlength="45" autocapitalize='off' autocorrect='off' autocomplete='off'>
+                    <input id="awshirt-audience-suggestion" class="pure-input-1 capitalize awshirt-answer-input" type="text" placeholder="NHẬP GỢI Ý" maxlength="45" autocapitalize='off' autocorrect='off' autocomplete='off'>
 
                     <button id="awshirt-audience-suggestion-submit" type="submit" class="pure-button pure-button-primary">Send</button>
                 </fieldset>
@@ -22909,7 +22909,7 @@ const wc = ph.exports,
                         <input id="awshirt-answer-input" name="awshirt-answer" class="pure-input-1 capitalize awshirt-answer-input" type="text" maxlength="45" placeholder="ANSWER HERE" autocapitalize="off" autocorrect="off" autocomplete="off">
                     </div>
                     <button type="submit" id="awshirt-submit-answer" class="awshirt-button button-large pure-button capitalize right"><i class="fas fa-paper-plane"></i>&nbsp;&nbsp;Send</button>
-                    <button type="submit" id="awshirt-suggestion" class="awshirt-button button-large pure-button capitalize right">Suggestion</button>
+                    <button type="submit" id="awshirt-suggestion" class="awshirt-button button-large pure-button capitalize right">Gợi ý</button>
                     <div id="awshirt-submit-answer-loading" style="display:none;" class="awshirt-button-loading"></div>            
                 </form>
                 <div id="awshirt-suggestions" class="pure-g"></div>
@@ -23456,7 +23456,7 @@ const ux = `url("data:image/svg+xml;utf8,<svg id='Layer_1' data-name='Layer 1' x
             return e = this.sanitizeInput(e).replace(/'/g, "\u2019"), Ze.htmlEscape(e).trim()
         },
         sanitizeInput(e) {
-            return InputSanitizerVN(e.replace("…", "..."))
+            return e = e.replace(/[^A-Z0-9\u0020-\uFFFF!?*$+\-’'_ .,=<>:;]/gi, ""), e
         },
         validateInput(e) {
             const t = lt(e.target);
@@ -23471,15 +23471,4 @@ const ux = `url("data:image/svg+xml;utf8,<svg id='Layer_1' data-name='Layer 1' x
 UC({
     MainView: hx
 });
-function InputSanitizerVN(a) {
-    let valids = "‚ !\"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyzẢẠẰẮẲẴẶẤẦẨẪẬĐẺẼẸẾỀỂỄỆỈĨỊỎỌỐỒỔỖỘỚỜỞỠỢỦŨỤỨỪỬỮỰỲỶỸỴảạằắẳẵặấầẩẫậđẻẽẹếềểễệỉĩịỏọốồổỗộớờởỡợủũụứừửữựỳỷỹỵ‘’“”„[]".split("");
-    let ia = a.split("");
-    let oa = "";
-    for (let i = 0; i < ia.length; i++) {
-        if (valids.includes(ia[i])) {
-            oa += ia[i];
-        }
-    }
-    return oa;
-}
 //# sourceMappingURL=f2516dba.js.map

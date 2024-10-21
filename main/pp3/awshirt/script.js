@@ -23456,7 +23456,7 @@ const ux = `url("data:image/svg+xml;utf8,<svg id='Layer_1' data-name='Layer 1' x
             return e = this.sanitizeInput(e).replace(/'/g, "\u2019"), Ze.htmlEscape(e).trim()
         },
         sanitizeInput(e) {
-            return InputSanitizerVN(t.replace("…", "..."))
+            return InputSanitizerVN(e.replace("…", "..."))
         },
         validateInput(e) {
             const t = lt(e.target);

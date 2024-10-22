@@ -22883,7 +22883,7 @@ const wc = ph.exports,
                     <label id="awshirt-audience-suggestion-instruction" for="audience-suggestion"></label>
                     <input id="awshirt-audience-suggestion" class="pure-input-1 capitalize awshirt-answer-input" type="text" placeholder="NHẬP GỢI Ý" maxlength="45" autocapitalize='off' autocorrect='off' autocomplete='off'>
 
-                    <button id="awshirt-audience-suggestion-submit" type="submit" class="pure-button pure-button-primary">Send</button>
+                    <button id="awshirt-audience-suggestion-submit" type="submit" class="pure-button pure-button-primary">Gửi</button>
                 </fieldset>
             </form>
         </div>

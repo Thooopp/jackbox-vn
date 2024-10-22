@@ -16808,8 +16808,8 @@ const lc = Ne.View.extend({
     },
     onRoomWasDestroyed() {
         yn.remove("roomCode"), yn.remove("reconnect"), Ve.show("error", {
-            titleText: "Disconnected",
-            text: "Thanks for playing!",
+            titleText: "Ngắt kết nối",
+            text: "Cảm ơn vì đã chơi!",
             willClose: () => {
                 window.location.reload(!0)
             }
@@ -16817,8 +16817,8 @@ const lc = Ne.View.extend({
     },
     onDisconnected() {
         Ve.show("error", {
-            titleText: "Disconnected",
-            text: "You have been disconnected.",
+            titleText: "Ngắt kết nối",
+            text: "Bạn đã bị ngắt kết nối.",
             willClose: () => {
                 window.location.reload(!0)
             }
@@ -16880,7 +16880,7 @@ const z1 = `<div id="controller" class="state-controller controller-content">
         <div id="characters" class="charactersContainer"></div>
     </div>
     <div id="artifactId" class="artifactContainer text">
-        <a id="artifactLink" aria-label="Visit the Gallery" class="artifactLink" target="_blank">
+        <a id="artifactLink" aria-label="Ghé thăm thư viện" class="artifactLink" target="_blank">
             <button id="artifactButton" class="artifactButton"></button>
         </a>
     </div>
@@ -16914,28 +16914,28 @@ const z1 = `<div id="controller" class="state-controller controller-content">
             formattedActiveContentId: null,
             isLocal: !1,
             strings: {
-                wait: "Sit back and relax!",
-                vip_waiting: "Waiting for all players to join",
-                vip_canStart: "Press this button when everybody has joined",
-                vip_cancel: "Press this button to cancel game start",
-                vip_postgame: "What would you like to do now?",
-                vip_episodes_menu: "Episodes Menu",
-                vip_episodes_unload: "Unload Episode",
-                vip_episodes_report: "Report Episode",
-                vip_episodes_warning: "Warning: user generated content is not rated",
-                vip_episodes_load: "Load an episode by id:",
-                vip_episodes_select: "Or select an episode:",
-                vip_episodes_back: "Back",
-                vip_episodes_submit: "SUBMIT",
-                vip_episodes_view_author: "View Author",
-                button_start: "Everybody's In",
-                button_cancel: "Cancel",
-                button_changename: "Change Name",
-                button_sameplayers: "Same Players",
-                button_newplayers: "New Players",
-                prompt_entername: "Enter your name",
-                prompt_choosecharacter: "Select your character",
-                button_censorOptions: "Censor Options",
+                wait: "Ngồi xuống và thư giãn!",
+                vip_waiting: "Đợi tất cả người chơi tham gia",
+                vip_canStart: "Nhấn nút này khi mọi người đã tham gia",
+                vip_cancel: "Nhấn nút này để hủy bắt đầu trò chơi",
+                vip_postgame: "Bạn muốn làm gì bây giờ?",
+                vip_episodes_menu: "Menu tập",
+                vip_episodes_unload: "Xóa tập",
+                vip_episodes_report: "Báo cáo tập",
+                vip_episodes_warning: "Cảnh báo: nội dung do người dùng tạo không được đánh giá",
+                vip_episodes_load: "Tải một tập bằng id:",
+                vip_episodes_select: "Hoặc chọn một tập:",
+                vip_episodes_back: "Quay lại",
+                vip_episodes_submit: "GỬI",
+                vip_episodes_view_author: "Xem tác giả",
+                button_start: "Mọi người có mặt",
+                button_cancel: "Hủy",
+                button_changename: "Đổi tên",
+                button_sameplayers: "Người chơi cũ",
+                button_newplayers: "Người chơi mới",
+                prompt_entername: "Nhập tên của bạn",
+                prompt_choosecharacter: "Chọn nhân vật của bạn",
+                button_censorOptions: "Tùy chọn kiểm duyệt",
                 censor_prompt: ""
             }
         }
@@ -17160,7 +17160,7 @@ const z1 = `<div id="controller" class="state-controller controller-content">
                             inputAttributes: {
                                 maxlength: 12
                             },
-                            inputValidator: f => f ? f.length > 12 ? "Limit 12 characters" : null : "You need to write something!"
+                            inputValidator: f => f ? f.length > 12 ? "Limit 12 characters" : null : "Bạn phải viết thứ gì đó!"
                         });
                         if (o.dismiss) return;
                         this.triggerMethod("client:message", {
@@ -17374,8 +17374,8 @@ const z1 = `<div id="controller" class="state-controller controller-content">
             SUPPORTED_LOCALES: ["en", "fr", "it", "de", "es"],
             LANGUAGE: "Language",
             LOGIN: "Login",
-            STRING_ERROR_SERVER_ROOM_DISCONNECTED: "Disconnected",
-            STRING_ERROR_SERVER_ROOM_DESTROYED: "Thanks for playing!"
+            STRING_ERROR_SERVER_ROOM_DISCONNECTED: "Ngắt kết nối",
+            STRING_ERROR_SERVER_ROOM_DESTROYED: "Cảm ơn vì đã chơi!"
         },
         fr: {
             LANGUAGE_NAME: "Fran\xE7ais",
@@ -17495,10 +17495,10 @@ const z1 = `<div id="controller" class="state-controller controller-content">
             announcePrompt: !1,
             countGroupName: null,
             strings: {
-                your_choice: "Thank you. Your choice: ",
-                censor_prompt: "Censor this?",
-                censor_confirm: "Yes, Censor!",
-                censor_cancel: "No!"
+                your_choice: "Cảm ơn. Lựa chọn của bạn: ",
+                censor_prompt: "Che cái này?",
+                censor_confirm: "Vâng, che!",
+                censor_cancel: "Không!"
             }
         }
     }),
@@ -17637,7 +17637,7 @@ const z1 = `<div id="controller" class="state-controller controller-content">
             })), !1
         },
         displayAudienceChoice(e) {
-            let t = "Thank you.";
+            let t = "Cảm ơn.";
             const n = e.map(o => {
                 const f = this.choicesList.children.find(v => v.model.get("index") === o);
                 return f ? f.model.get("html") || f.model.get("text") : ""
@@ -19106,10 +19106,10 @@ const kC = `<div id="controller" class="state-controller controller-content">\r
             doneText: {},
             announcePrompt: !1,
             strings: {
-                your_choice: "Thank you. Your choice: ",
-                censor_prompt: "Censor this?",
-                censor_confirm: "Yes, Censor!",
-                censor_cancel: "No!"
+                your_choice: "Cảm ơn. Lựa chọn của bạn: ",
+                censor_prompt: "Che cái này?",
+                censor_confirm: "Vâng, che!",
+                censor_cancel: "Không!"
             }
         }
     }),
@@ -22671,7 +22671,7 @@ const wc = ph.exports,
                         <div class="pure-u-1"></div> 
                          
                         <div id="lobby-censor-players" class="pure-u-1"></div> 
-                        <div class="awshirt-text awshirt-text-alt">Hit X to CENSOR player for rest of the game, hiding their name.</div>
+                        <div class="awshirt-text awshirt-text-alt">Nhấn X để CHE người chơi trong suốt phần còn lại của trò chơi, ẩn tên của họ.</div>
                     </form> 
                 </div> 
             </div>
@@ -22707,7 +22707,7 @@ const wc = ph.exports,
                                 </li>
                             </ul>
                             <canvas class="awshirt-sketchpad" width='600' height='600' style='background-color:white;'> 
-                              Sorry, your browser is not supported. 
+                              Xin lỗi, trình duyệt của bạn không được hỗ trợ. 
                             </canvas> 
                             <ul class="awshirt-drawing-buttons nav nav-tabs awshirt-nav-backgrounds">
                                 <li class="pull-left">
@@ -22745,13 +22745,13 @@ const wc = ph.exports,
                 </div>
 
                 <div class="col-xs-12 awshirt-button-bar post-sketchpad">
-                    <button type="button" id="awshirt-drawing-audience-censor" class="awshirt-audience-censor awshirt-button capitalize btn btn-block">CENSOR AUDIENCE</button>
+                    <button type="button" id="awshirt-drawing-audience-censor" class="awshirt-audience-censor awshirt-button capitalize btn btn-block">CHE KHÁN GIẢ</button>
                     <button id="awshirt-suggestdraw" class='awshirt-button-suggestion awshirt-suggestion awshirt-button btn btn-block'> 
                         <span id="awshirt-instructions" class='awshirt-text-instruction awshirt-text drawing-instructions'>GỢI Ý</span>
                     </button> 
 
                     <p class="awshirt-text-instruction">
-                        <span id="awshirt-instructions" class='awshirt-text-instruction awshirt-text instructions'>a picture of yourself!</span>
+                        <span id="awshirt-instructions" class='awshirt-text-instruction awshirt-text instructions'>bức vẽ bản thân!</span>
                     </p>
                 </div>
             <!-- </div> -->
@@ -22767,7 +22767,7 @@ const wc = ph.exports,
                         <div class="row">
                             <div class="awshirt-task"></div>
                             <p class="awshirt-text-instruction">
-                                <span class='awshirt-text-instruction awshirt-text instructions'>a picture of yourself!</span>
+                                <span class='awshirt-text-instruction awshirt-text instructions'>bức vẽ bản thân!</span>
                             </p>
                             <label for='awshirt-title-input' id="awshirt-input-task"></label>
                             <input id='awshirt-title-input' value='' type='text' class='form-control input-lg awshirt-input-text' autocapitalize='off' autocorrect='off' autocomplete='off' maxlength='70'/>
@@ -22792,14 +22792,14 @@ const wc = ph.exports,
                     </div>
 
                     <div class="col-xs-12">
-                        <button type="button" id="awshirt-input-audience-censor" class="awshirt-audience-censor awshirt-button capitalize btn btn-block">CENSOR AUDIENCE</button>
+                        <button type="button" id="awshirt-input-audience-censor" class="awshirt-audience-censor awshirt-button capitalize btn btn-block">CHE KHÁN GIẢ</button>
                     </div>
                 </fieldset>
             </form>
         </div>
 
         <div id="state-prompts-done" class="pt-page-off awshirt-page awshirt-player-avatar-large">
-            <!-- <h2>Waiting for other players to finish!</h2> -->
+            <!-- <h2>Đợi tất cả người chơi còn lại hoàn thành!</h2> -->
         </div>
 
         <div id="state-shirt" class="pt-page-off awshirt-page">
@@ -22864,16 +22864,16 @@ const wc = ph.exports,
         </div>
 
         <div id="state-shirts-done" class="pt-page-off awshirt-page container awshirt-player-avatar-large">
-            <!-- <h2>Waiting for other players to finish!</h2> -->
+            <!-- <h2>Đợi tất cả người chơi còn lại hoàn thành!</h2> -->
         </div>
 
         <div id="state-vote" class="pt-page-off awshirt-page container">
-            <p class="awshirt-text-instruction">Pick your favorite!</p>
+            <p class="awshirt-text-instruction">Chọn chiếc áo bạn thích!</p>
             <div id="vote-buttons" class="pure-form awshirt-vote-buttons awshirt-text"></div>
         </div>
         
         <div id="state-voting-done" class="pt-page-off awshirt-page container awshirt-player-avatar-large">
-            <!-- <h2>Waiting for other players to finish!</h2> -->
+            <!-- <h2>Đợi tất cả người chơi còn lại hoàn thành!</h2> -->
         </div>
 
         <div id="state-audience-suggestions" class="pt-page-off awshirt-page">
@@ -22906,9 +22906,9 @@ const wc = ph.exports,
                 <span id="awshirt-submit-alert" class="alert alert-info">Alert message goes here</span>
                 <form class="pure-form" id="awshirt-answer-field">
                     <div class="pure-u-1">
-                        <input id="awshirt-answer-input" name="awshirt-answer" class="pure-input-1 capitalize awshirt-answer-input" type="text" maxlength="45" placeholder="ANSWER HERE" autocapitalize="off" autocorrect="off" autocomplete="off">
+                        <input id="awshirt-answer-input" name="awshirt-answer" class="pure-input-1 capitalize awshirt-answer-input" type="text" maxlength="45" placeholder="TRẢ LỜI Ở ĐÂY" autocapitalize="off" autocorrect="off" autocomplete="off">
                     </div>
-                    <button type="submit" id="awshirt-submit-answer" class="awshirt-button button-large pure-button capitalize right"><i class="fas fa-paper-plane"></i>&nbsp;&nbsp;Send</button>
+                    <button type="submit" id="awshirt-submit-answer" class="awshirt-button button-large pure-button capitalize right"><i class="fas fa-paper-plane"></i>&nbsp;&nbsp;Gửi</button>
                     <button type="submit" id="awshirt-suggestion" class="awshirt-button button-large pure-button capitalize right">Gợi ý</button>
                     <div id="awshirt-submit-answer-loading" style="display:none;" class="awshirt-button-loading"></div>            
                 </form>
@@ -22917,7 +22917,7 @@ const wc = ph.exports,
         </div>    
         
         <div id="state-done-answering" class="pt-page-off awshirt-page">
-            <br/><span>Thanks for your answers!</span><br/>
+            <br/><span>Cảm ơn vì câu trả lời của bạn!</span><br/>
         </div>
     </div>
 </div>
@@ -22934,68 +22934,68 @@ const ux = `url("data:image/svg+xml;utf8,<svg id='Layer_1' data-name='Layer 1' x
         backgroundColors: ["#2f5f9d", "#d02c41", "#2a3a2a", "#0d162d", "#51346c", "#43342e", "#080808", "#505253"],
         stories: {
             cat: {
-                intro: "My mother is very ill. I must win the tournament to pay for her surgery.",
-                taunt: "I knew I could do it!"
+                intro: "Mẹ của tôi bị bệnh rất nặng. Tôi phải thắng giải đấu để trả tiền cho ca phẫu thuật.",
+                taunt: "Tôi biết mình có thể làm được!"
             },
             raccoon: {
-                intro: "I must win the tournament or the evil banker will repossess the orphanage!",
-                taunt: "I put all of my heart into winning!"
+                intro: "Tôi phải thắng giải đấu hoặc tên chủ ngân hàng độc ác sẽ chiếm lại trại trẻ mồ côi!",
+                taunt: "Tôi dồn hết tâm huyết để giành chiến thắng!"
             },
             kappa: {
-                intro: "If I win the tournament, I will get my own reality show!",
-                taunt: "Now I will be famous!"
+                intro: "Nếu tôi thắng giải đấu, tôi sẽ có một chương trình truyền hình thực tế của riêng mình!",
+                taunt: "Bây giờ tôi sẽ nổi tiếng!"
             },
             dog: {
-                intro: "WOOF! WOOF WOOF!",
-                taunt: "BARK! WOOF! BARK BARK!"
+                intro: "GÂU! GÂU GÂU!",
+                taunt: "GÂU! GÂU! GÂU GÂU!"
             },
             umbrella: {
-                intro: "My dream is to open a sandal shop. I would also like to win this tournament!",
-                taunt: "What an unexpected surprise!"
+                intro: "Ước mơ của tôi là mở một cửa hàng dép. Tôi cũng muốn thắng giải đấu này!",
+                taunt: "Thật là một bất ngờ ngoài dự đoán!"
             },
             blueDemon: {
-                intro: "My shirt will put my twin\u2019s efforts to shame!",
-                taunt: "Sorry, but my skills are superior!"
+                intro: "Chiếc áo của tôi sẽ làm lu mờ nỗ lực của người em song sinh của tôi!",
+                taunt: "Xin lỗi, nhưng kỹ năng của tôi vượt trội hơn!"
             },
             redDemon: {
-                intro: "I don\u2019t care about winning, as long as I beat my twin!",
-                taunt: "I was born to be the best!"
+                intro: "Tôi không quan tâm đến thắng thua, miễn là tôi đánh bại người chị song sinh của tôi!",
+                taunt: "Tôi được sinh ra để trở thành người giỏi nhất!"
             },
             catfish: {
-                intro: "I\u2019m competing to raise Fin Rot awareness!",
-                taunt: "I win! Please donate to cure Fin Rot today!"
+                intro: "Tôi tham gia để nâng cao nhận thức về bệnh thối vây!",
+                taunt: "Tôi thắng rồi! Hãy quyên góp để chữa thối vây ngay hôm nay!"
             },
             hair: {
-                intro: "I HUNGER FOR VICTORY!",
-                taunt: "MY HUNGER HAS BEEN SATISFIED\u2026FOR NOW\u2026"
+                intro: "TA THÈM KHÁT CHIẾN THẮNG!",
+                taunt: "CƠN ĐÓI CỦA TA ĐÃ ĐƯỢC THỎA MÃN\u2026TẠM THỜI\u2026"
             },
             bun: {
-                intro: "I\u2019ve never made t-shirts before, but I\u2019m usually pretty lucky.",
-                taunt: "I never lose!"
+                intro: "Tôi chưa bao giờ làm áo thun trước đây, nhưng tôi thường khá may mắn.",
+                taunt: "Tôi không bao giờ thua!"
             },
             fox: {
-                intro: "After I win the tournament, I can take a year off and finish my sitcom pilot!",
-                taunt: "Hollywood, here I come!"
+                intro: "Sau khi thắng giải đấu, tôi có thể nghỉ một năm và hoàn thành kịch bản sitcom của mình!",
+                taunt: "Hollywood, ta đến đây!"
             },
             fire: {
-                intro: "I\u2019m just happy to get out of the house!",
-                taunt: "We\u2019re having so much fun, guys!"
+                intro: "Tôi chỉ vui vì được ra khỏi nhà!",
+                taunt: "Chúng ta đang có rất nhiều niềm vui, mọi người!"
             },
             crow: {
-                intro: "I did not mean to enter this tournament! It was a clerical error!",
-                taunt: "What is happening? Did I win?"
+                intro: "Tôi không có ý định tham gia giải đấu này! Đây là một sai sót trong giấy tờ!",
+                taunt: "Chuyện gì đang xảy ra vậy? Tôi đã thắng ư?"
             },
             monkey: {
-                intro: "If I don\u2019t win the tournament, I guess I\u2019ll go paint houses for my uncle.",
-                taunt: "I deserve this!"
+                intro: "Nếu tôi không thắng giải đấu, tôi đoán là tôi sẽ đi sơn nhà cho chú tôi.",
+                taunt: "Tôi xứng đáng với điều này!"
             },
             baku: {
-                intro: "Winning the tournament is my life-long dream!",
-                taunt: "All my dreams are coming true!"
+                intro: "Thắng giải đấu là giấc mơ cuộc đời tôi!",
+                taunt: "Giấc mơ của tôi đang thành hiện thực!"
             },
             snake: {
-                intro: "I do not have arms, but my love of t-shirts is strong. I will win the tournament!",
-                taunt: "I am honored to accept this victory."
+                intro: "Tôi không có tay, nhưng tình yêu của tôi dành cho áo thun rất mãnh liệt. Tôi sẽ thắng giải đấu!",
+                taunt: "Tôi rất vinh dự được nhận chiến thắng này."
             }
         },
         events: {
@@ -23061,7 +23061,7 @@ const ux = `url("data:image/svg+xml;utf8,<svg id='Layer_1' data-name='Layer 1' x
         setPlayerTaunt() {
             const e = this.$el.find("#awshirt-taunt-text"),
                 t = this.$el.find("#awshirt-taunt-submit");
-            if (e.prop("disabled")) e.prop("disabled", !1), t.html("SET"), e.focus(), e.select();
+            if (e.prop("disabled")) e.prop("disabled", !1), t.html("ĐẶT"), e.focus(), e.select();
             else {
                 const n = e.val();
                 if (this.sanitize(n).length === 0) return !1;
@@ -23161,7 +23161,7 @@ const ux = `url("data:image/svg+xml;utf8,<svg id='Layer_1' data-name='Layer 1' x
             let o = e.lobbyState,
                 f = 0;
             if (this.currentAnswerQuestionId = -1, n === "RoomFull") {
-                Ve.show(Error("The room is full"), {
+                Ve.show(Error("Phòng đã đầy"), {
                     willClose: () => {
                         window.location.reload(!0)
                     }
@@ -23169,7 +23169,7 @@ const ux = `url("data:image/svg+xml;utf8,<svg id='Layer_1' data-name='Layer 1' x
                 return
             }
             if (n === "GameLocked") {
-                Ve.show(Error("Game is in progress. Please wait for a new game to start."), {
+                Ve.show(Error("Trò chơi đang diễn ra. Vui lòng đợi trò chơi mới bắt đầu."), {
                     willClose: () => {
                         window.location.reload(!0)
                     }
@@ -23200,10 +23200,10 @@ const ux = `url("data:image/svg+xml;utf8,<svg id='Layer_1' data-name='Layer 1' x
                     this.$el.find(".gallery-link").html(D), yi.add(v, this.getOption("appTag")), this.$el.find("#awshirt-lobby-postgame").show()
                 } else this.$el.find("#awshirt-lobby-postgame").hide();
                 if (!t.isAllowedToStartGame) {
-                    this.$el.find("#awshirt-lobby-text").html("Sit back and relax!"), this.showScreen("#state-lobby");
+                    this.$el.find("#awshirt-lobby-text").html("Ngồi xuống và thư giãn!"), this.showScreen("#state-lobby");
                     return
                 }
-                e.sendDefaultColor && this.sendDefaultColor(), o || (o = t.state.split("_")[1]), o === "WaitingForMore" ? (this.$el.find("#awshirt-lobby-text").html("Waiting for all players to join"), lt(".awshirt-avatars").show(), this.$el.find("#awshirt-taunt-input-group").show()) : o === "CanStart" ? (this.$el.find("#awshirt-lobby-text").html("Press this button when everybody has joined"), this.$el.find("#awshirt-startgame").show(), lt(".awshirt-avatars").show(), this.$el.find("#awshirt-taunt-input-group").show()) : o === "Countdown" ? (this.$el.find("#awshirt-lobby-text").html("Press this button to cancel game start"), this.$el.find("#awshirt-stopcountdown").show(), lt(".awshirt-avatars").hide(), this.$el.find("#awshirt-taunt-input-group").hide()) : o === "PostGame" && (this.$el.find("#awshirt-lobby-text").html("What do you want to do?"), lt(".awshirt-endbuttons").show(), lt(".awshirt-avatars").hide(), this.$el.find("#awshirt-taunt-input-group").hide()), this.showScreen("#state-lobby")
+                e.sendDefaultColor && this.sendDefaultColor(), o || (o = t.state.split("_")[1]), o === "WaitingForMore" ? (this.$el.find("#awshirt-lobby-text").html("Đợi tất cả người chơi tham gia"), lt(".awshirt-avatars").show(), this.$el.find("#awshirt-taunt-input-group").show()) : o === "CanStart" ? (this.$el.find("#awshirt-lobby-text").html("Nhấn nút này khi mọi người đã tham gia"), this.$el.find("#awshirt-startgame").show(), lt(".awshirt-avatars").show(), this.$el.find("#awshirt-taunt-input-group").show()) : o === "Countdown" ? (this.$el.find("#awshirt-lobby-text").html("Nhấn nút này để hủy bắt đầu trò chơi"), this.$el.find("#awshirt-stopcountdown").show(), lt(".awshirt-avatars").hide(), this.$el.find("#awshirt-taunt-input-group").hide()) : o === "PostGame" && (this.$el.find("#awshirt-lobby-text").html("Bạn muốn làm gì?"), lt(".awshirt-endbuttons").show(), lt(".awshirt-avatars").hide(), this.$el.find("#awshirt-taunt-input-group").hide()), this.showScreen("#state-lobby")
             } else if (i === "Logo") lt(".player-title-bar").hide(), lt(".awshirt-message-panel").show(), this.showScreen("#state-logo");
             else if (i && i.split("_")[0] === "Gameplay")
                 if (n && n.split("_")[0] === "Gameplay") {
@@ -23215,13 +23215,13 @@ const ux = `url("data:image/svg+xml;utf8,<svg id='Layer_1' data-name='Layer 1' x
                             });
                             break;
                         case "DrawingComplete":
-                            lt(".awshirt-audience-censor").hide(), this.$el.find("#awshirt-message").html("Waiting for other players to finish!"), t.canCensor && e.canDoSuggestions && (lt(".awshirt-audience-censor").show(), this.$el.find("#awshirt-message").append('<div class="col-xs-12"><button type="button" id="awshirt-drawing-audience-censor" class="awshirt-audience-censor awshirt-button capitalize btn btn-block">CENSOR AUDIENCE</button></div>')), lt(".awshirt-message-panel").show(), this.showScreen("#state-drawing-done");
+                            lt(".awshirt-audience-censor").hide(), this.$el.find("#awshirt-message").html("Đợi tất cả người chơi còn lại hoàn thành!"), t.canCensor && e.canDoSuggestions && (lt(".awshirt-audience-censor").show(), this.$el.find("#awshirt-message").append('<div class="col-xs-12"><button type="button" id="awshirt-drawing-audience-censor" class="awshirt-audience-censor awshirt-button capitalize btn btn-block">CHE KHÁN GIẢ</button></div>')), lt(".awshirt-message-panel").show(), this.showScreen("#state-drawing-done");
                             break;
                         case "InputPrompt":
                             lt(".instructions").html(t.task), t.suggestion ? (lt(".instructions").html(t.task), lt(".awshirt-suggestion").show(), lt(".awshirt-suggestion").prop("disabled", !1), lt(".instructions").show()) : (lt(".instructions").html(t.alert), lt(".awshirt-suggestion").hide(), lt(".instructions").show()), lt(".awshirt-audience-censor").hide(), t.canCensor && e.canDoSuggestions && lt(".awshirt-audience-censor").show(), this.showScreen("#state-input");
                             break;
                         case "PromptsDone":
-                            this.$el.find("#awshirt-audience-censor-done").hide(), this.$el.find("#awshirt-message").html("Waiting for other players to finish!"), t.canCensor && e.canDoSuggestions && (this.$el.find("#awshirt-audience-censor-done").show(), this.$el.find("#awshirt-message").append('<div class="col-xs-12"><button type="button" id="awshirt-drawing-audience-censor" class="awshirt-audience-censor awshirt-button capitalize btn btn-block">CENSOR AUDIENCE</button></div>')), lt(".awshirt-message-panel").show(), this.showScreen("#state-prompts-done");
+                            this.$el.find("#awshirt-audience-censor-done").hide(), this.$el.find("#awshirt-message").html("Đợi tất cả người chơi còn lại hoàn thành!"), t.canCensor && e.canDoSuggestions && (this.$el.find("#awshirt-audience-censor-done").show(), this.$el.find("#awshirt-message").append('<div class="col-xs-12"><button type="button" id="awshirt-drawing-audience-censor" class="awshirt-audience-censor awshirt-button capitalize btn btn-block">CHE KHÁN GIẢ</button></div>')), lt(".awshirt-message-panel").show(), this.showScreen("#state-prompts-done");
                             break;
                         case "ShirtTime": {
                             if (lt(".player-title-bar").hide(), this.currentCanvas || this.startDrawingInterface(t.playerColors), this.$el.find("#toggle-prompt").data("params", 0), t.drawings && lt(".awshirt-drawing").length !== t.drawings.length) {
@@ -23283,7 +23283,7 @@ const ux = `url("data:image/svg+xml;utf8,<svg id='Layer_1' data-name='Layer 1' x
                     break
                 }
                 case "DoneVoting":
-                    this.$el.find("#awshirt-message").html("Waiting for other players to finish!"), lt(".awshirt-message-panel").show(), this.showScreen("#state-voting-done");
+                    this.$el.find("#awshirt-message").html("Đợi tất cả người chơi còn lại hoàn thành!"), lt(".awshirt-message-panel").show(), this.showScreen("#state-voting-done");
                     break
             }
         },
@@ -23308,7 +23308,7 @@ const ux = `url("data:image/svg+xml;utf8,<svg id='Layer_1' data-name='Layer 1' x
                         this.$el.find(".gallery-link").attr("href", v);
                         const k = `<img src="${y}" />`;
                         this.$el.find(".gallery-link").html(k), yi.add(i, this.getOption("appTag"))
-                    } else this.$el.find("#awshirt-audience").html("Sit back and relax!");
+                    } else this.$el.find("#awshirt-audience").html("Ngồi xuống và thư giãn!");
                     this.showScreen("#state-audience");
                     break
                 }
@@ -23320,10 +23320,10 @@ const ux = `url("data:image/svg+xml;utf8,<svg id='Layer_1' data-name='Layer 1' x
                         o = e.instruction;
                     switch (i) {
                         case "Gameplay_ShirtTime":
-                            this.$el.find("#awshirt-audience").html("Training in progress..."), this.showScreen("#state-audience");
+                            this.$el.find("#awshirt-audience").html("Quá trình huấn luyện đang diễn ra..."), this.showScreen("#state-audience");
                             break;
                         case "Suggestions":
-                            e.canDoSuggestions ? (this.$el.find("#awshirt-audience-suggestion-instruction").html(o), this.showScreen("#state-audience-suggestions")) : (this.$el.find("#awshirt-audience").html("Training in progress..."), this.showScreen("#state-audience"));
+                            e.canDoSuggestions ? (this.$el.find("#awshirt-audience-suggestion-instruction").html(o), this.showScreen("#state-audience-suggestions")) : (this.$el.find("#awshirt-audience").html("Quá trình huấn luyện đang diễn ra..."), this.showScreen("#state-audience"));
                             break;
                         default:
                             this.$el.find("#awshirt-audience").html(""), this.showScreen("#state-audience");
@@ -23404,7 +23404,7 @@ const ux = `url("data:image/svg+xml;utf8,<svg id='Layer_1' data-name='Layer 1' x
             const t = lt(e.target).data("index");
             return this.client.isRole("player") ? this.client.send("SendMessageToRoomOwner", {
                 vote: t
-            }) : this.client.isRole("audience") && (this.$el.find("#awshirt-audience").html("Thanks for voting!"), this.showScreen("#state-audience"), this.client.sessionSend("vote", "AwShirt Vote", {
+            }) : this.client.isRole("audience") && (this.$el.find("#awshirt-audience").html("Cảm ơn vì đã bình chọn!"), this.showScreen("#state-audience"), this.client.sessionSend("vote", "AwShirt Vote", {
                 type: "vote",
                 vote: t
             })), lt(".awshirt-vote-button").removeClass("selected"), lt(e.target).addClass("selected"), !1

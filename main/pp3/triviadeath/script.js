@@ -16852,7 +16852,7 @@ const VC = Et.View.extend({
         <div id="characters" class="charactersContainer"></div>
     </div>
     <div id="artifactId" class="artifactContainer text">
-        <a id="artifactLink" aria-label="Visit the Gallery" class="artifactLink" target="_blank">
+        <a id="artifactLink" aria-label="Ghé thăm thư viện" class="artifactLink" target="_blank">
             <button id="artifactButton" class="artifactButton"></button>
         </a>
     </div>
@@ -17256,7 +17256,7 @@ const VC = Et.View.extend({
 <div id="message" class="message"><h2 class="messageText"></h2></div>
 <div id="action" class="action"></div>
 <div id="artifactId" class="artifactContainer text">
-    <a id="artifactLink" aria-label="Visit the Gallery" class="artifactLink" target="_blank">
+    <a id="artifactLink" aria-label="Ghé thăm thư viện" class="artifactLink" target="_blank">
         <button id="artifactButton" class="artifactButton"></button>
     </a>
 </div>
@@ -21344,7 +21344,7 @@ const Gx = VC.extend({
                 if (g) {
                     se("#make-single-choice-text").html(`<p>${E}</p>`);
                     let A = "";
-                    for (let D = 0; D < k.length; D++) A += `<button data-choice="${D}" class="${k[D].disabled?`background-finger background-finger-${D}`:""} light-text button-choice button-game button-large btn" ${k[D].disabled?"disabled":""}>${k[D].disabled?"&zwnj;":E==="Làm lại họa tiết bằng cách nhấn các nút ở bên dưới."?new Map([["Orange","Cam"],["Blue","Lam"],["Green","Lục"],["Gun","Súng"],["Knife","Dao"],["Hammer","Búa"],["Grenade","Lựu đạn"]]).get(k[D].text):k[D].text}</button>`;
+                    for (let D = 0; D < k.length; D++) A += `<button data-choice="${D}" class="${k[D].disabled?`background-finger background-finger-${D}`:""} light-text button-choice button-game button-large btn" ${k[D].disabled?"disabled":""}>${k[D].disabled?"&zwnj;":E==="Lặp lại họa tiết bằng cách nhấn các nút ở bên dưới."?new Map([["Orange","Cam"],["Blue","Lam"],["Green","Lục"],["Gun","Súng"],["Knife","Dao"],["Hammer","Búa"],["Grenade","Lựu đạn"]]).get(k[D].text):k[D].text}</button>`;
                     se("#make-single-choice-choices").html(A)
                 } else se("#make-single-choice-text").html("<p>Cảm ơn.</p>"), se("#make-single-choice-choices").html("");
                 this.showScreen("#state-make-single-choice")
